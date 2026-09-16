@@ -88,7 +88,7 @@ section{padding-block:64px}
 .tiles{display:grid;gap:24px}
 @media (min-width:768px){.tiles{grid-template-columns:repeat(3,1fr);gap:32px}}
 .tile{display:grid;gap:12px}
-.tile-media{position:relative;aspect-ratio:4/5;border-radius:var(--radius);overflow:hidden;background:#111}
+.tile-media{position:relative;aspect-ratio:4/3;border-radius:var(--radius);overflow:hidden;background:#111}
 .tile-media.wide{aspect-ratio:5/4}
 .tile-media img,.tile-media video{width:100%;height:100%;object-fit:cover}
 .tile-media video{position:absolute;inset:0;opacity:0;transition:opacity .3s}
@@ -319,7 +319,7 @@ body{padding-bottom:78px}
     <div class="tiles" id="proofTiles">
       <div class="tile" data-key="switchboard">
         <div class="tile-media js-clip" data-src="assets/switchboard.mp4">
-          <img src="assets/switchboard-poster.jpg" alt="Darren testing a new safety switch board with the cover off" loading="lazy" width="1024" height="1280">
+          <img src="assets/switchboard-poster.jpg" alt="Darren testing a new safety switch board with the cover off" loading="lazy" width="1440" height="1080">
           <video muted loop playsinline preload="none"></video>
           <span class="tile-tag">Switchboard upgrade</span>
         </div>
@@ -328,7 +328,7 @@ body{padding-bottom:78px}
       </div>
       <div class="tile" data-key="smoke">
         <div class="tile-media js-clip" data-src="assets/smokealarm.mp4">
-          <img src="assets/smokealarm-poster.jpg" alt="Interconnected photoelectric smoke alarm being fitted to a ceiling" loading="lazy" width="1024" height="1280">
+          <img src="assets/smokealarm-poster.jpg" alt="Darren fitting an interconnected photoelectric smoke alarm to a ceiling" loading="lazy" width="1440" height="1080">
           <video muted loop playsinline preload="none"></video>
           <span class="tile-tag">Smoke alarms</span>
         </div>
@@ -337,7 +337,7 @@ body{padding-bottom:78px}
       </div>
       <div class="tile" data-key="lighting">
         <div class="tile-media">
-          <img src="assets/pendant-kitchen-portrait-640.jpg" srcset="assets/pendant-kitchen-portrait-640.jpg 640w, assets/pendant-kitchen-portrait-1200.jpg 1200w" sizes="(min-width:768px) 30vw, 100vw" alt="Darren hanging pendant lights over a kitchen bench" loading="lazy" width="512" height="640">
+          <img src="assets/pendant-kitchen-640.jpg" srcset="assets/pendant-kitchen-640.jpg 640w, assets/pendant-kitchen-1200.jpg 1350w" sizes="(min-width:768px) 30vw, 100vw" alt="Darren hanging pendant lights over a kitchen bench" loading="lazy" width="1350" height="1080">
           <span class="tile-tag">Lighting and power</span>
         </div>
         <h3>Kitchen pendants and downlights, hung straight and wired right</h3>
@@ -356,7 +356,7 @@ body{padding-bottom:78px}
 <section class="s-yellow" id="offer">
   <div class="container two flip">
     <div class="two-media">
-      <img src="assets/tablet-report-640.jpg" srcset="assets/tablet-report-640.jpg 640w, assets/tablet-report-1200.jpg 1200w" sizes="(min-width:900px) 45vw, 100vw" alt="Electrician reviewing a written test report on a tablet at the switchboard" loading="lazy" width="1200" height="960">
+      <img src="assets/tablet-report-640.jpg" srcset="assets/tablet-report-640.jpg 640w, assets/tablet-report-1200.jpg 1350w" sizes="(min-width:900px) 45vw, 100vw" alt="Electrician reviewing a written test report on a tablet at the switchboard" loading="lazy" width="1350" height="1080">
     </div>
     <div>
       <div class="section-head" style="margin-bottom:28px">
@@ -398,7 +398,7 @@ body{padding-bottom:78px}
     <div class="svc-lead" id="svcLead">
       <div class="svc-row" data-key="switchboard">
         <div class="svc-media js-clip" data-src="assets/switchboard.mp4">
-          <img src="assets/switchboard-poster.jpg" alt="New switchboard with safety switches being tested" loading="lazy" width="1024" height="1280">
+          <img src="assets/switchboard-poster.jpg" alt="New switchboard with safety switches being tested" loading="lazy" width="1440" height="1080">
           <video muted loop playsinline preload="none"></video>
         </div>
         <div class="svc-copy">
@@ -409,7 +409,7 @@ body{padding-bottom:78px}
       </div>
       <div class="svc-row flip" data-key="smoke">
         <div class="svc-media js-clip" data-src="assets/smokealarm.mp4">
-          <img src="assets/smokealarm-poster.jpg" alt="Photoelectric smoke alarm fitted and tested" loading="lazy" width="1024" height="1280">
+          <img src="assets/smokealarm-poster.jpg" alt="Photoelectric smoke alarm fitted and tested" loading="lazy" width="1440" height="1080">
           <video muted loop playsinline preload="none"></video>
         </div>
         <div class="svc-copy">
@@ -420,7 +420,7 @@ body{padding-bottom:78px}
       </div>
       <div class="svc-row" data-key="lighting">
         <div class="svc-media">
-          <img src="assets/pendant-kitchen-640.jpg" srcset="assets/pendant-kitchen-640.jpg 640w, assets/pendant-kitchen-1200.jpg 1200w" sizes="(min-width:900px) 45vw, 100vw" alt="Darren hanging pendant lights in a new kitchen" loading="lazy" width="1200" height="960">
+          <img src="assets/pendant-kitchen-640.jpg" srcset="assets/pendant-kitchen-640.jpg 640w, assets/pendant-kitchen-1200.jpg 1350w" sizes="(min-width:900px) 45vw, 100vw" alt="Darren hanging pendant lights in a new kitchen" loading="lazy" width="1350" height="1080">
         </div>
         <div class="svc-copy">
           <h3>Lighting, power and fans</h3>
@@ -431,25 +431,25 @@ body{padding-bottom:78px}
     </div>
     <div class="svc-grid">
       <div class="svc-card">
-        <div class="svc-media"><img src="assets/nbn-hand-640.jpg" srcset="assets/nbn-hand-640.jpg 640w, assets/nbn-hand-1200.jpg 1200w" sizes="(min-width:1024px) 22vw, (min-width:700px) 45vw, 100vw" alt="Data cable being terminated at the NBN connection box" loading="lazy" width="1200" height="960"></div>
+        <div class="svc-media"><img src="assets/nbn-hand-640.jpg" srcset="assets/nbn-hand-640.jpg 640w, assets/nbn-hand-1200.jpg 1350w" sizes="(min-width:1024px) 22vw, (min-width:700px) 45vw, 100vw" alt="Data cable being terminated at the NBN connection box" loading="lazy" width="1350" height="1080"></div>
         <h3>Data, NBN and Wi-Fi</h3>
         <p>Cabling, a tidy NBN point, and Wi-Fi that reaches the back room, so the internet works in the rooms you actually use.</p>
         <a href="#quote">Get my free quote</a>
       </div>
       <div class="svc-card">
-        <div class="svc-media"><img src="assets/fan-install-640.jpg" srcset="assets/fan-install-640.jpg 640w, assets/fan-install-1200.jpg 1200w" sizes="(min-width:1024px) 22vw, (min-width:700px) 45vw, 100vw" alt="Ceiling fan being installed" loading="lazy" width="1200" height="960"></div>
+        <div class="svc-media"><img src="assets/fan-install-640.jpg" srcset="assets/fan-install-640.jpg 640w, assets/fan-install-1200.jpg 1350w" sizes="(min-width:1024px) 22vw, (min-width:700px) 45vw, 100vw" alt="Ceiling fan being installed" loading="lazy" width="1350" height="1080"></div>
         <h3>Renovations, pools and spas</h3>
         <p>Kitchen, bathroom and outdoor electrical booked to the builder's dates. Pool, spa and hot water circuits done to code, with timers that cut the bill.</p>
         <a href="#quote">Get my free quote</a>
       </div>
       <div class="svc-card">
-        <div class="svc-media"><img src="assets/led-battens-640.jpg" srcset="assets/led-battens-640.jpg 640w, assets/led-battens-1200.jpg 1200w" sizes="(min-width:1024px) 22vw, (min-width:700px) 45vw, 100vw" alt="LED batten lights installed across a workshop ceiling" loading="lazy" width="1200" height="960"></div>
+        <div class="svc-media"><img src="assets/led-battens-640.jpg" srcset="assets/led-battens-640.jpg 640w, assets/led-battens-1200.jpg 1350w" sizes="(min-width:1024px) 22vw, (min-width:700px) 45vw, 100vw" alt="LED batten lights installed across a workshop ceiling" loading="lazy" width="1350" height="1080"></div>
         <h3>Commercial and builders</h3>
         <p>Fit-outs, LED lighting, machinery power and maintenance for local businesses, and subcontract work for builders who need it done on the date.</p>
         <a href="#quote">Get my free quote</a>
       </div>
       <div class="svc-card">
-        <div class="svc-media"><img src="assets/clamp-test-640.jpg" srcset="assets/clamp-test-640.jpg 640w, assets/clamp-test-1200.jpg 1200w" sizes="(min-width:1024px) 22vw, (min-width:700px) 45vw, 100vw" alt="Clamp meter testing a circuit at the ceiling" loading="lazy" width="1200" height="960"></div>
+        <div class="svc-media"><img src="assets/clamp-test-640.jpg" srcset="assets/clamp-test-640.jpg 640w, assets/clamp-test-1200.jpg 1350w" sizes="(min-width:1024px) 22vw, (min-width:700px) 45vw, 100vw" alt="Clamp meter testing a circuit at the ceiling" loading="lazy" width="1350" height="1080"></div>
         <h3>Faults and 24/7 emergencies</h3>
         <p>Something tripping, sparking or dead? Fault finding, safety switch replacement and after-hours call-outs, any day of the week.</p>
         <a class="js-tel" href="tel:0400000000">Call now</a>
@@ -476,7 +476,7 @@ body{padding-bottom:78px}
       </div>
     </div>
     <div class="two-media">
-      <img src="assets/darren-cathy-640.jpg" srcset="assets/darren-cathy-640.jpg 640w, assets/darren-cathy-1200.jpg 1200w" sizes="(min-width:900px) 45vw, 100vw" alt="Darren and Cathy from Foreshore Electrical and Data" loading="lazy" width="1200" height="960">
+      <img src="assets/darren-cathy-640.jpg" srcset="assets/darren-cathy-640.jpg 640w, assets/darren-cathy-1200.jpg 1350w" sizes="(min-width:900px) 45vw, 100vw" alt="Darren and Cathy from Foreshore Electrical and Data" loading="lazy" width="1350" height="1080">
     </div>
   </div>
 </section>
