@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Foreshore Free Quote</title>
+<meta name="description" content="Fixed-price switchboard upgrades, smoke alarms and electrical for Caloundra, Little Mountain, Aura and the southern Sunshine Coast. Free switchboard and smoke alarm health check with any job over $400.">
+<style>
+:root{
+  --yellow:#FAB505; --yellow-hover:#E5A504; --dark:#252119; --dark-2:#2E2920; --ink:#0D0900;
+  --green:#91B816; --grey:#ECECEC; --muted:#DADAD8; --line-light:#DDDDDD; --line-dark:rgba(255,255,255,.2);
+  --white:#FFFFFF; --sel:#FFF7DF;
+  --font:system-ui,-apple-system,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+  --container:1280px; --gutter:20px; --radius:16px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;font-family:var(--font);font-size:16px;line-height:24px;color:var(--ink);background:var(--dark);-webkit-font-smoothing:antialiased}
+img,video{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3,h4{margin:0;font-weight:500;line-height:1.2;text-wrap:balance}
+h1{font-size:40px;letter-spacing:-.72px}
+h2{font-size:32px;letter-spacing:-.52px}
+h3{font-size:20px;line-height:28px;letter-spacing:-.28px}
+p{margin:0}
+.lead{font-size:18px;line-height:27px}
+.small{font-size:14px;line-height:21px}
+.container{max-width:var(--container);margin:0 auto;padding-inline:var(--gutter)}
+section{padding-block:64px}
+.s-dark{background:var(--dark);color:var(--white)}
+.s-dark .muted{color:var(--muted)}
+.s-yellow{background:var(--yellow);color:var(--ink)}
+.s-green{background:var(--green);color:var(--ink)}
+.eyebrow{font-size:13px;line-height:18px;letter-spacing:.12em;text-transform:uppercase;font-weight:500;opacity:.8}
+.section-head{display:grid;gap:12px;margin-bottom:40px;max-width:760px}
+
+/* Buttons: the site's pill */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-width:120px;height:48px;padding:12px 24px;border-radius:100px;border:0;font:inherit;font-weight:500;font-size:16px;line-height:1;text-decoration:none;cursor:pointer;transition:background .18s ease;white-space:nowrap}
+.btn:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
+.btn-primary{background:var(--yellow);color:var(--ink)}
+.btn-primary:hover{background:var(--yellow-hover)}
+.btn-secondary{background:var(--grey);color:var(--ink)}
+.btn-secondary:hover{background:#dcdcdc}
+.btn-dark{background:var(--dark);color:var(--white)}
+.btn-dark:hover{background:#3a332a}
+.btn-sm{height:40px;padding:8px 20px;font-size:15px}
+.btn-block{width:100%}
+
+/* Header */
+.header{position:sticky;top:0;z-index:50;background:var(--dark);color:var(--white);height:64px}
+.header .container{height:100%;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.header .logo img{height:36px;width:auto}
+@media (max-width:480px){.header .logo img{height:30px}}
+
+/* Preview switcher (only with ?preview=1) */
+.preview-bar{display:none;background:#111;color:#fff;font-size:13px;line-height:18px;padding:8px var(--gutter);gap:6px 14px;flex-wrap:wrap;align-items:center;justify-content:center}
+.preview-bar.on{display:flex}
+.preview-bar a{color:#FAB505;text-decoration:none;padding:4px 10px;border:1px solid #444;border-radius:100px}
+.preview-bar a.active{background:#FAB505;color:#0D0900;border-color:#FAB505}
+
+/* Hero */
+.hero{position:relative;overflow:hidden;background:var(--dark);color:var(--white);padding-block:0;isolation:isolate}
+.hero-media{position:absolute;inset:0;z-index:-2}
+.hero-media video,.hero-media img{width:100%;height:100%;object-fit:cover;object-position:center 30%}
+.hero::after{content:"";position:absolute;inset:0;background:rgba(0,0,0,.5);z-index:-1}
+.hero .container{display:grid;gap:40px;padding-block:56px 40px;min-height:560px;align-content:end}
+.hero-copy{display:grid;gap:20px;max-width:640px}
+.hero h1{color:var(--grey)}
+.hero .lead{color:var(--muted)}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px}
+.hero-note{font-size:14px;line-height:21px;color:var(--muted)}
+.rating{display:inline-flex;align-items:center;gap:10px;font-size:15px;font-weight:500;color:var(--white)}
+.stars{display:inline-flex;gap:2px}
+.stars svg{width:18px;height:18px;fill:var(--yellow)}
+.trust{display:flex;flex-wrap:wrap;gap:10px 22px;font-size:14px;line-height:20px;color:var(--white)}
+.trust span{display:inline-flex;align-items:center;gap:8px}
+.trust svg{width:22px;height:22px;stroke:var(--yellow);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.hero-form{display:none}
+@media (min-width:1024px){
+  .hero .container{grid-template-columns:minmax(0,1fr) 440px;align-items:end;padding-block:72px 64px;min-height:640px}
+  .hero-form{display:block}
+  .hero-form .form-panel{margin:0}
+}
+
+/* Proof */
+.tiles{display:grid;gap:24px}
+@media (min-width:768px){.tiles{grid-template-columns:repeat(3,1fr);gap:32px}}
+.tile{display:grid;gap:12px}
+.tile-media{position:relative;aspect-ratio:4/5;border-radius:var(--radius);overflow:hidden;background:#111}
+.tile-media.wide{aspect-ratio:5/4}
+.tile-media img,.tile-media video{width:100%;height:100%;object-fit:cover}
+.tile-media video{position:absolute;inset:0;opacity:0;transition:opacity .3s}
+.tile-media.playing video{opacity:1}
+.tile-tag{position:absolute;left:14px;top:14px;background:var(--yellow);color:var(--ink);font-size:12px;line-height:16px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;padding:6px 10px;border-radius:100px}
+.tile h3{color:var(--white)}
+.tile p{color:var(--muted);font-size:15px;line-height:22px}
+.stats{display:grid;gap:24px;margin-top:48px;padding-top:40px;border-top:1px solid var(--line-dark)}
+@media (min-width:768px){.stats{grid-template-columns:repeat(3,1fr)}}
+.stat b{display:block;font-size:48px;line-height:1;font-weight:500;color:var(--yellow);letter-spacing:-.5px;font-variant-numeric:tabular-nums}
+.stat span{display:block;margin-top:10px;color:var(--white)}
+
+/* Two column */
+.two{display:grid;gap:32px;align-items:center}
+@media (min-width:900px){.two{grid-template-columns:1fr 1fr;gap:72px}.two.flip>.two-media{order:2}}
+.two-media{border-radius:var(--radius);overflow:hidden}
+.two-media img{width:100%;height:100%;object-fit:cover;aspect-ratio:5/4}
+
+/* Offer value stack */
+.stack{display:grid}
+.stack-item{display:grid;grid-template-columns:40px 1fr;gap:16px;padding-block:22px;border-top:1px solid var(--line-light)}
+.stack-item:first-child{border-top:0;padding-top:0}
+.stack-item svg{width:32px;height:32px;stroke:var(--ink);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.stack-item h3{margin-bottom:6px}
+.urgency{margin-top:8px;padding:20px 0 0;border-top:1px solid var(--line-light);font-size:20px;line-height:28px;font-weight:500;letter-spacing:-.28px}
+.offer-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px;align-items:center}
+
+/* Services */
+.svc-lead{display:grid;gap:56px}
+.svc-row{display:grid;gap:24px;align-items:center}
+@media (min-width:900px){.svc-row{grid-template-columns:1fr 1fr;gap:72px}.svc-row.flip .svc-media{order:2}}
+.svc-media{position:relative;border-radius:var(--radius);overflow:hidden;background:#111;aspect-ratio:5/4}
+.svc-media img,.svc-media video{width:100%;height:100%;object-fit:cover}
+.svc-media video{position:absolute;inset:0;opacity:0;transition:opacity .3s}
+.svc-media.playing video{opacity:1}
+.svc-copy{display:grid;gap:14px;justify-items:start}
+.svc-copy p{color:var(--muted)}
+.svc-grid{display:grid;gap:32px;margin-top:64px;padding-top:56px;border-top:1px solid var(--line-dark)}
+@media (min-width:700px){.svc-grid{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1024px){.svc-grid{grid-template-columns:repeat(4,1fr)}}
+.svc-card{display:grid;gap:12px;align-content:start}
+.svc-card .svc-media{aspect-ratio:4/3}
+.svc-card p{color:var(--muted);font-size:15px;line-height:22px}
+.svc-card a{color:var(--yellow);font-weight:500;text-decoration:none;font-size:15px}
+.svc-card a:hover{text-decoration:underline}
+
+/* Promise list */
+.promise{display:grid}
+.promise-item{display:grid;grid-template-columns:40px 1fr;gap:16px;padding-block:20px;border-top:1px solid var(--line-light)}
+.promise-item:first-child{border-top:0;padding-top:0}
+.promise-item svg{width:32px;height:32px;stroke:var(--ink);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.promise-item h3{margin-bottom:4px}
+
+/* About video */
+.about-video{position:relative;border-radius:var(--radius);overflow:hidden;background:#000;aspect-ratio:16/9}
+.about-video video{width:100%;height:100%;object-fit:cover}
+.about-video .play{position:absolute;inset:0;width:100%;height:100%;border:0;background:rgba(0,0,0,.25);display:grid;place-items:center;cursor:pointer;padding:0}
+.about-video .play span{display:inline-flex;align-items:center;gap:12px;background:var(--yellow);color:var(--ink);padding:14px 26px 14px 18px;border-radius:100px;font:inherit;font-weight:500;font-size:16px}
+.about-video .play svg{width:22px;height:22px;fill:var(--ink)}
+.about-video.playing .play{display:none}
+.about-copy{display:grid;gap:16px}
+.about-copy p{color:var(--muted)}
+.about-copy .sig{color:var(--white);font-weight:500}
+
+/* Steps */
+.steps{display:grid;gap:32px}
+@media (min-width:768px){.steps{grid-template-columns:repeat(3,1fr);gap:48px}}
+.step b{display:block;font-size:48px;line-height:1;font-weight:500;color:var(--yellow);margin-bottom:16px;font-variant-numeric:tabular-nums}
+.step h3{color:var(--white);margin-bottom:8px}
+.step p{color:var(--muted)}
+
+/* Reviews */
+.reviews{display:grid;gap:0}
+@media (min-width:900px){.reviews{grid-template-columns:repeat(3,1fr);gap:48px}}
+.review{display:grid;gap:12px;padding-block:28px;border-top:1px solid var(--line-dark);align-content:start}
+@media (min-width:900px){.review{border-top:0;padding-block:0}}
+.review .stars svg{width:20px;height:20px}
+.review .job{font-size:14px;color:var(--muted)}
+.review q{quotes:none;color:var(--white)}
+.review .who{color:var(--white);font-weight:500}
+.review .who span{display:block;font-weight:400;font-size:14px;color:var(--muted)}
+.badge{display:inline-flex;align-items:center;gap:10px;color:var(--white);font-weight:500;margin-bottom:8px}
+
+/* FAQ */
+.faq{max-width:860px}
+.faq details{border-top:1px solid var(--line-light)}
+.faq details:last-child{border-bottom:1px solid var(--line-light)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 0;font-size:20px;line-height:28px;font-weight:500;letter-spacing:-.28px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:26px;line-height:1;flex:none;width:28px;text-align:center}
+.faq details[open] summary::after{content:"\2212"}
+.faq details p{padding:0 0 22px;max-width:70ch}
+
+/* Form */
+.form-panel{margin:0 auto;max-width:560px;background:var(--dark-2);border:1px solid var(--line-dark);border-radius:var(--radius);padding:28px;color:var(--white)}
+@media (min-width:600px){.form-panel{padding:32px}}
+.form-panel h2{font-size:28px;color:var(--white);margin-bottom:8px}
+.form-panel .sub{color:var(--muted);margin-bottom:20px}
+.progress{height:4px;background:rgba(255,255,255,.15);border-radius:2px;overflow:hidden;margin-bottom:22px}
+.progress i{display:block;height:100%;background:var(--yellow);width:20%;transition:width .25s}
+.step-pane{display:none}
+.step-pane.active{display:grid;gap:12px}
+.q{font-size:20px;line-height:28px;font-weight:500;letter-spacing:-.28px;margin-bottom:4px}
+.opts{display:grid;gap:10px}
+.opt{display:flex;align-items:center;min-height:48px;padding:12px 16px;border-radius:10px;background:var(--white);color:var(--ink);border:2px solid transparent;cursor:pointer;font-weight:500;font-size:16px;line-height:22px}
+.opt:hover{border-color:var(--yellow)}
+.opt.selected{border-color:var(--yellow);background:var(--sel)}
+.opt input{position:absolute;opacity:0;pointer-events:none}
+.field{display:grid;gap:6px}
+.field label{font-size:14px;color:var(--muted)}
+.field input{height:48px;border-radius:8px;border:2px solid transparent;background:var(--white);color:var(--ink);font:inherit;font-size:16px;padding:0 14px;width:100%}
+.field input:focus{outline:0;border-color:var(--yellow)}
+.field input.error{border-color:#E5484D}
+.row2{display:grid;gap:12px}
+@media (min-width:480px){.row2{grid-template-columns:1fr 1fr}}
+.form-nav{display:flex;gap:10px;margin-top:6px}
+.form-nav .btn-back{background:transparent;color:var(--muted);min-width:0;padding-inline:14px}
+.form-nav .btn-back:hover{color:var(--white);background:transparent}
+.form-hint{font-size:13px;line-height:19px;color:var(--muted)}
+.form-fine{font-size:13px;line-height:19px;color:var(--muted);margin-top:14px;display:grid;gap:4px}
+.form-error{color:#FFB4B4;font-size:14px;display:none}
+.form-error.on{display:block}
+.thanks{display:none;gap:14px}
+.thanks.on{display:grid}
+.thanks h3{color:var(--white);font-size:26px}
+.thanks p{color:var(--muted)}
+
+/* Final CTA */
+.cta-band .container{display:grid;gap:28px}
+@media (min-width:900px){.cta-band .container{grid-template-columns:1fr auto;align-items:center}}
+.cta-band h2{margin-bottom:12px}
+.cta-band .btns{display:flex;flex-wrap:wrap;gap:12px}
+
+/* Footer */
+.footer{background:var(--dark);color:var(--white);padding:64px 0 24px}
+@media (min-width:900px){.footer{padding:80px 0 32px}}
+.footer-grid{display:grid;gap:36px}
+@media (min-width:768px){.footer-grid{grid-template-columns:1.2fr 1fr 1fr .8fr;gap:40px}}
+.footer h4{font-size:20px;line-height:28px;font-weight:500;margin-bottom:12px}
+.footer ul{list-style:none;margin:0;padding:0;display:grid;gap:6px;font-size:14px;color:var(--muted)}
+.footer a{color:var(--white);text-decoration:underline}
+.footer .logo img{height:44px;width:auto}
+.footer .about-line{color:var(--muted);font-size:14px;max-width:34ch;margin-top:14px}
+.footer .social{display:flex;gap:10px}
+.footer .social span{width:40px;height:40px;border:1px solid var(--line-dark);border-radius:100px;display:grid;place-items:center}
+.footer .social svg{width:18px;height:18px;fill:var(--white)}
+.footer-legal{margin-top:48px;padding-top:24px;border-top:1px solid var(--line-dark);display:grid;gap:8px;font-size:13px;line-height:19px;color:var(--muted)}
+.footer-legal .row{display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-between}
+.privacy{max-width:70ch;font-size:13px;line-height:19px;color:var(--muted)}
+
+/* Sticky bar */
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--dark);padding:10px var(--gutter) calc(10px + env(safe-area-inset-bottom,0px));display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.sticky .btn{min-width:0;width:100%}
+@media (min-width:1024px){.sticky{display:none}}
+body{padding-bottom:78px}
+@media (min-width:1024px){body{padding-bottom:0}}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+@media (min-width:768px){
+  h1{font-size:44px}h2{font-size:40px}
+  section{padding-block:64px}
+}
+@media (min-width:1024px){
+  h1{font-size:56px}h2{font-size:48px}
+  section{padding-block:96px}
+  .container{padding-inline:5%}
+}
+</style>
+</head>
+<body>
+
+<div class="preview-bar" id="previewBar">
+  <span>Preview variant:</span>
+  <a href="?preview=1&area=coast" data-area="coast">Southern coast (default)</a>
+  <a href="?preview=1&area=aura" data-area="aura">Aura / Caloundra West</a>
+  <a href="?preview=1&area=caloundra" data-area="caloundra">Little Mountain / Aroona / Currimundi</a>
+  <a href="?preview=1&area=beaches" data-area="beaches">Caloundra beaches / Pelican Waters</a>
+</div>
+
+<header class="header">
+  <div class="container">
+    <a class="logo" href="#top" aria-label="Foreshore Electrical and Data"><img src="assets/logo-horizontal.png" alt="Foreshore Electrical and Data" width="684" height="140"></a>
+    <a class="btn btn-primary btn-sm" href="#quote">Get my free quote</a>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- SECTION 1: HERO -->
+<section class="hero" id="hero">
+  <div class="hero-media" aria-hidden="true">
+    <video id="heroVideo" muted loop playsinline preload="metadata" poster="assets/hero-poster.jpg">
+      <source src="assets/hero.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="container">
+    <div class="hero-copy">
+      <div class="rating" aria-label="5.0 stars from 32 Google reviews">
+        <span class="stars" id="starsHero"></span>
+        <span>5.0 from 32 Google reviews</span>
+      </div>
+      <h1 data-v="headline">Switchboard upgrades, smoke alarms and electrical done right, by the Caloundra sparkie you actually speak to.</h1>
+      <p class="lead" data-v="sub">Fixed price before we start, booked this week, and a free switchboard and smoke alarm health check with any job over $400. Darren has kept southern Sunshine Coast homes safe for 15 years.</p>
+      <div class="trust">
+        <span><svg viewBox="0 0 24 24"><path d="M12 2l3 6 6 .9-4.5 4.3 1.1 6.3L12 16.6 6.4 19.5l1.1-6.3L3 8.9 9 8z"/></svg>15+ years on the Sunshine Coast</span>
+        <span><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg>Licensed and insured</span>
+        <span><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Same-week booking</span>
+        <span><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>24/7 emergencies</span>
+      </div>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#quote">Get my free quote</a>
+        <a class="btn btn-secondary js-tel" href="tel:0400000000">Call now</a>
+      </div>
+      <p class="hero-note">Text reply straight away. The electrician calls you back to price it, not a call centre.</p>
+    </div>
+    <div class="hero-form" id="heroFormSlot"></div>
+  </div>
+</section>
+
+<!-- SECTION 2: PROOF -->
+<section class="s-dark" id="proof">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow muted" data-v="proofEyebrow">Recent jobs</p>
+      <h2 data-v="proofHeadline">Recent Jobs Across The Southern Coast</h2>
+      <p class="lead muted">Filmed on real jobs, not stock. Tap a tile to watch the electrician work.</p>
+    </div>
+    <div class="tiles" id="proofTiles">
+      <div class="tile" data-key="switchboard">
+        <div class="tile-media js-clip" data-src="assets/switchboard.mp4">
+          <img src="assets/switchboard-poster.jpg" alt="Darren testing a new safety switch board with the cover off" loading="lazy" width="1024" height="1280">
+          <video muted loop playsinline preload="none"></video>
+          <span class="tile-tag">Switchboard upgrade</span>
+        </div>
+        <h3>Old board to safety switches on every circuit</h3>
+        <p>Ceramic fuses out, RCBO board in, every circuit tested and labelled before the cover goes back on. Done in a day.</p>
+      </div>
+      <div class="tile" data-key="smoke">
+        <div class="tile-media js-clip" data-src="assets/smokealarm.mp4">
+          <img src="assets/smokealarm-poster.jpg" alt="Interconnected photoelectric smoke alarm being fitted to a ceiling" loading="lazy" width="1024" height="1280">
+          <video muted loop playsinline preload="none"></video>
+          <span class="tile-tag">Smoke alarms</span>
+        </div>
+        <h3>Interconnected alarms to the 2027 Queensland standard</h3>
+        <p>Photoelectric, interconnected, in every bedroom and hallway, tested on the day so the house passes when it is checked.</p>
+      </div>
+      <div class="tile" data-key="lighting">
+        <div class="tile-media">
+          <img src="assets/pendant-kitchen-portrait-640.jpg" srcset="assets/pendant-kitchen-portrait-640.jpg 640w, assets/pendant-kitchen-portrait-1200.jpg 1200w" sizes="(min-width:768px) 30vw, 100vw" alt="Darren hanging pendant lights over a kitchen bench" loading="lazy" width="512" height="640">
+          <span class="tile-tag">Lighting and power</span>
+        </div>
+        <h3>Kitchen pendants and downlights, hung straight and wired right</h3>
+        <p>New points, pendants, downlights and fans for renovations and new estates, priced before the ladder comes out.</p>
+      </div>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>15+</b><span>years on the Sunshine Coast</span></div>
+      <div class="stat"><b>5.0</b><span>stars from 32 Google reviews</span></div>
+      <div class="stat"><b>24/7</b><span>emergency call-outs for homes and businesses</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 3: THE OFFER -->
+<section class="s-yellow" id="offer">
+  <div class="container two flip">
+    <div class="two-media">
+      <img src="assets/tablet-report-640.jpg" srcset="assets/tablet-report-640.jpg 640w, assets/tablet-report-1200.jpg 1200w" sizes="(min-width:900px) 45vw, 100vw" alt="Electrician reviewing a written test report on a tablet at the switchboard" loading="lazy" width="1200" height="960">
+    </div>
+    <div>
+      <div class="section-head" style="margin-bottom:28px">
+        <p class="eyebrow">The offer</p>
+        <h2>Free Health Check. Fixed Price. Booked This Week.</h2>
+        <p class="lead">Book any job over $400 and the electrician checks your switchboard and smoke alarms while he is there, at no charge, and tells you straight what is fine and what is not.</p>
+      </div>
+      <div class="stack">
+        <div class="stack-item">
+          <svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>
+          <div><h3>What is included</h3><p>A switchboard inspection (fuse type, safety switches, condition, capacity for what you are adding) and a smoke alarm check against the Queensland rules, with a written note of anything that needs doing and what it would cost. No obligation on the extras.</p></div>
+        </div>
+        <div class="stack-item">
+          <svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg>
+          <div><h3>What it is worth</h3><p>A licensed electrician's eyes on the two things most likely to hurt your family or fail an insurance claim, before either does. Most homes with a pre-2000 board or battery alarms have at least one thing that needs fixing.</p></div>
+        </div>
+        <div class="stack-item">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M14.5 9.5a2.5 2.5 0 0 0-5 0c0 2.5 5 2.5 5 5a2.5 2.5 0 0 1-5 0M12 6v1.5M12 16.5V18"/></svg>
+          <div><h3>What you pay</h3><p>Nothing for the check. Switchboard upgrades and smoke alarm installs are quoted as a fixed price before we start. The price you are quoted is the price you pay.</p></div>
+        </div>
+      </div>
+      <p class="urgency">From 1 January 2027 every Queensland home must have interconnected photoelectric smoke alarms. The calendar is small, so quotes are worked in order of enquiry.</p>
+      <div class="offer-cta">
+        <a class="btn btn-dark" href="#quote">Get my free quote</a>
+        <span class="small">Licensed, insured and completed to Australian Standards.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 4: SERVICES -->
+<section class="s-dark" id="services">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow muted">What we do</p>
+      <h2>What We Do</h2>
+      <p class="lead muted" data-v="servicesLead">Electrical and data under one roof, for homes and small businesses from Caloundra to Currimundi.</p>
+    </div>
+    <div class="svc-lead" id="svcLead">
+      <div class="svc-row" data-key="switchboard">
+        <div class="svc-media js-clip" data-src="assets/switchboard.mp4">
+          <img src="assets/switchboard-poster.jpg" alt="New switchboard with safety switches being tested" loading="lazy" width="1024" height="1280">
+          <video muted loop playsinline preload="none"></video>
+        </div>
+        <div class="svc-copy">
+          <h3>Switchboard upgrades</h3>
+          <p>Ceramic fuses and old boards replaced with a modern board and safety switches on every circuit, so the power stops tripping and the house passes when the insurer or the buyer asks. Fixed price before we start, done in a day.</p>
+          <a class="btn btn-primary" href="#quote">Get my free quote</a>
+        </div>
+      </div>
+      <div class="svc-row flip" data-key="smoke">
+        <div class="svc-media js-clip" data-src="assets/smokealarm.mp4">
+          <img src="assets/smokealarm-poster.jpg" alt="Photoelectric smoke alarm fitted and tested" loading="lazy" width="1024" height="1280">
+          <video muted loop playsinline preload="none"></video>
+        </div>
+        <div class="svc-copy">
+          <h3>Smoke alarm compliance</h3>
+          <p>Interconnected photoelectric alarms in every bedroom, hallway and level, installed and tested to the 2027 Queensland standard, so you are not scrambling in December. Rentals and holiday lets already have to comply, and we check first and only quote what the house needs.</p>
+          <a class="btn btn-primary" href="#quote">Get my free quote</a>
+        </div>
+      </div>
+      <div class="svc-row" data-key="lighting">
+        <div class="svc-media">
+          <img src="assets/pendant-kitchen-640.jpg" srcset="assets/pendant-kitchen-640.jpg 640w, assets/pendant-kitchen-1200.jpg 1200w" sizes="(min-width:900px) 45vw, 100vw" alt="Darren hanging pendant lights in a new kitchen" loading="lazy" width="1200" height="960">
+        </div>
+        <div class="svc-copy">
+          <h3>Lighting, power and fans</h3>
+          <p>Pendants, downlights, ceiling fans, outdoor and shed power, and the extra points the builder never included, priced before the ladder comes out. Rewiring for older homes when the board tells us it is time.</p>
+          <a class="btn btn-primary" href="#quote">Get my free quote</a>
+        </div>
+      </div>
+    </div>
+    <div class="svc-grid">
+      <div class="svc-card">
+        <div class="svc-media"><img src="assets/nbn-hand-640.jpg" srcset="assets/nbn-hand-640.jpg 640w, assets/nbn-hand-1200.jpg 1200w" sizes="(min-width:1024px) 22vw, (min-width:700px) 45vw, 100vw" alt="Data cable being terminated at the NBN connection box" loading="lazy" width="1200" height="960"></div>
+        <h3>Data, NBN and Wi-Fi</h3>
+        <p>Cabling, a tidy NBN point, and Wi-Fi that reaches the back room, so the internet works in the rooms you actually use.</p>
+        <a href="#quote">Get my free quote</a>
+      </div>
+      <div class="svc-card">
+        <div class="svc-media"><img src="assets/fan-install-640.jpg" srcset="assets/fan-install-640.jpg 640w, assets/fan-install-1200.jpg 1200w" sizes="(min-width:1024px) 22vw, (min-width:700px) 45vw, 100vw" alt="Ceiling fan being installed" loading="lazy" width="1200" height="960"></div>
+        <h3>Renovations, pools and spas</h3>
+        <p>Kitchen, bathroom and outdoor electrical booked to the builder's dates. Pool, spa and hot water circuits done to code, with timers that cut the bill.</p>
+        <a href="#quote">Get my free quote</a>
+      </div>
+      <div class="svc-card">
+        <div class="svc-media"><img src="assets/led-battens-640.jpg" srcset="assets/led-battens-640.jpg 640w, assets/led-battens-1200.jpg 1200w" sizes="(min-width:1024px) 22vw, (min-width:700px) 45vw, 100vw" alt="LED batten lights installed across a workshop ceiling" loading="lazy" width="1200" height="960"></div>
+        <h3>Commercial and builders</h3>
+        <p>Fit-outs, LED lighting, machinery power and maintenance for local businesses, and subcontract work for builders who need it done on the date.</p>
+        <a href="#quote">Get my free quote</a>
+      </div>
+      <div class="svc-card">
+        <div class="svc-media"><img src="assets/clamp-test-640.jpg" srcset="assets/clamp-test-640.jpg 640w, assets/clamp-test-1200.jpg 1200w" sizes="(min-width:1024px) 22vw, (min-width:700px) 45vw, 100vw" alt="Clamp meter testing a circuit at the ceiling" loading="lazy" width="1200" height="960"></div>
+        <h3>Faults and 24/7 emergencies</h3>
+        <p>Something tripping, sparking or dead? Fault finding, safety switch replacement and after-hours call-outs, any day of the week.</p>
+        <a class="js-tel" href="tel:0400000000">Call now</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 5: WHY FORESHORE -->
+<section class="s-yellow" id="why">
+  <div class="container two">
+    <div>
+      <div class="section-head" style="margin-bottom:28px">
+        <p class="eyebrow">Our electrical promise</p>
+        <h2>Why Locals Book Foreshore</h2>
+      </div>
+      <div class="promise">
+        <div class="promise-item"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg><div><h3>You speak to the electrician who does the job</h3><p>Nothing is lost between a call centre and the person at your door. Darren prices it, Darren turns up.</p></div></div>
+        <div class="promise-item"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 9h10M7 13h6"/></svg><div><h3>Fixed price before we start</h3><p>The quote is what you pay, not a number that grows once the cover is off. Anything extra gets its own price, and you decide.</p></div></div>
+        <div class="promise-item"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H8l-4 4z"/><path d="M8 9h8M8 12h5"/></svg><div><h3>Instant text reply, real callback</h3><p>Every enquiry gets a text straight back and a call from the electrician, so you are not chasing a tradie who went quiet.</p></div></div>
+        <div class="promise-item"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4M9 15l2 2 4-4"/></svg><div><h3>Same-week booking on quoted work</h3><p>The tripping board or the compliance letter gets dealt with, not left sitting on the fridge.</p></div></div>
+        <div class="promise-item"><svg viewBox="0 0 24 24"><path d="M12 2l3 6 6 .9-4.5 4.3 1.1 6.3L12 16.6 6.4 19.5l1.1-6.3L3 8.9 9 8z"/></svg><div><h3>Fifteen years, 5.0 from 32 reviews</h3><p>Locals in Currimundi, Banya and Baringa have already written down how the job goes. Read them below.</p></div></div>
+        <div class="promise-item"><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg><div><h3>Licensed, insured, to Australian Standards</h3><p>Your insurer, your tenant and your buyer never have a question about who did the work.</p></div></div>
+      </div>
+    </div>
+    <div class="two-media">
+      <img src="assets/darren-cathy-640.jpg" srcset="assets/darren-cathy-640.jpg 640w, assets/darren-cathy-1200.jpg 1200w" sizes="(min-width:900px) 45vw, 100vw" alt="Darren and Cathy from Foreshore Electrical and Data" loading="lazy" width="1200" height="960">
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 6: MEET DARREN AND CATHY + HOW IT WORKS -->
+<section class="s-dark" id="about">
+  <div class="container">
+    <div class="two" style="margin-bottom:80px">
+      <div class="about-video" id="aboutVideo">
+        <video id="aboutPlayer" playsinline preload="none" poster="assets/about-poster.jpg">
+          <source src="assets/about.mp4" type="video/mp4">
+        </video>
+        <button class="play" type="button" id="aboutPlay" aria-label="Play: meet Darren and Cathy">
+          <span><svg viewBox="0 0 24 24"><path d="M7 4l14 8-14 8z"/></svg>Meet Darren and Cathy</span>
+        </button>
+      </div>
+      <div class="about-copy">
+        <p class="eyebrow muted">Get to know your electrician</p>
+        <h2>A Local Family Business, Not A Franchise</h2>
+        <p>Darren and Cathy run Foreshore Electrical and Data from Banya, and have spent over 15 years serving homes and businesses across the southern Sunshine Coast. From the moment you call to the day the job is finished, you deal with them: clear communication, licensed workmanship, and a straight answer on what the house needs.</p>
+        <p class="sig">Reliable. Responsive. Trusted by locals.</p>
+      </div>
+    </div>
+    <div class="section-head">
+      <p class="eyebrow muted">Three steps</p>
+      <h2>How It Works</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><b>1</b><h3>Request your quote</h3><p>30 seconds on this page or one call. You get a text straight back confirming we have it.</p></div>
+      <div class="step"><b>2</b><h3>We price it</h3><p>The electrician calls you, asks a few questions or looks at a photo of the board, and sends a fixed price.</p></div>
+      <div class="step"><b>3</b><h3>Booked this week</h3><p>The job goes in the calendar, the health check happens on the day, and you get a straight answer on anything else the house needs.</p></div>
+    </div>
+    <div style="margin-top:40px"><a class="btn btn-primary" href="#quote">Get my free quote</a></div>
+  </div>
+</section>
+
+<!-- SECTION 7: REVIEWS -->
+<section class="s-dark" id="reviews" style="padding-top:0">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow muted">Testimonials</p>
+      <h2>What Sunshine Coast Locals Say</h2>
+      <p class="badge"><span class="stars" id="starsBadge"></span>5.0 stars, 32 Google reviews</p>
+    </div>
+    <div class="reviews">
+      <div class="review"><span class="stars" data-stars></span><span class="job">Quality electrician</span><q>The electrical works were completed to a high standard with excellent attention to detail. Darren was professional, efficient, and ensured everything was done safely and neatly. Great communication throughout the job. Highly recommended!</q><span class="who">Raya<span>Currimundi</span></span></div>
+      <div class="review"><span class="stars" data-stars></span><span class="job">Residential installation</span><q>Reached out to get a timer installed on our hot water system. Absolutely fantastic to deal with, and went out of his way to provide lots of advice regarding things outside of the requested job, as well as catching a couple things our electricians didn't do properly. If you're looking for a good electrician, he's the guy.</q><span class="who">Tristen<span>Banya</span></span></div>
+      <div class="review"><span class="stars" data-stars></span><span class="job">Commercial fit-out</span><q>Darren and his team at Foreshore electrical did a great job fitting out our manufacturing factory. Very friendly and professional and will be using him again.</q><span class="who">Matt<span>Baringa</span></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 8: FAQ -->
+<section class="s-yellow" id="faq">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Straight answers</p>
+      <h2>Questions Locals Ask First</h2>
+    </div>
+    <div class="faq">
+      <details><summary>How much does a switchboard upgrade cost?</summary><p>Every board is different, which is why the quote is free. Send a photo of your board with the form and you get a firm, fixed number from the electrician before anything is booked.</p></details>
+      <details><summary>What is the free health check?</summary><p>While the electrician is at your place for any job over $400, he inspects the switchboard and checks the smoke alarms against the Queensland rules, then tells you what is fine and what is not, with a price for anything that needs doing. No charge, no obligation.</p></details>
+      <details><summary>Do my smoke alarms really need changing?</summary><p>From 1 January 2027 every Queensland home must have interconnected photoelectric alarms in each bedroom, hallway and level. Rentals and homes being sold already have to comply. If your alarms are standalone, battery-only or more than ten years old, they will not pass. We check first and only quote what the house needs.</p></details>
+      <details><summary>How fast can you come out?</summary><p>Quoted work is booked the same week in most cases. Emergencies are 24/7. Every enquiry gets a text reply straight away and a call from the electrician in business hours.</p></details>
+      <details><summary>Will the price change once you start?</summary><p>No. Fixed price means the number you are quoted is the number on the invoice. If we find something extra while the cover is off, you get a separate price and you decide.</p></details>
+      <details><summary>Are you licensed and insured?</summary><p>Yes. Licensed electrical contractor, fully insured, 15 years on the Sunshine Coast, and every job completed to Australian Standards.</p></details>
+      <details><summary>Where do you work?</summary><p data-v="faqAreas">Caloundra, Little Mountain, Aroona, Currimundi, Banya, Baringa, Caloundra West, Pelican Waters, Golden Beach, Kings Beach, Moffat Beach and the southern Sunshine Coast. Put your suburb in the form and we will confirm.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 9: QUOTE FORM -->
+<section class="s-dark" id="quote">
+  <div class="container">
+    <div class="form-panel" id="formPanel">
+      <form id="quoteForm" novalidate autocomplete="on">
+        <h2>Get my free quote</h2>
+        <p class="sub">Takes 30 seconds. You get a text straight back and a fixed price from the electrician.</p>
+        <div class="progress" aria-hidden="true"><i id="progressBar"></i></div>
+
+        <fieldset class="step-pane active" data-step="1" style="border:0;padding:0;margin:0;min-width:0">
+          <legend class="q">What do you need?</legend>
+          <div class="opts" data-name="service">
+            <label class="opt"><input type="radio" name="service" value="Switchboard upgrade">Switchboard upgrade</label>
+            <label class="opt"><input type="radio" name="service" value="Smoke alarms">Smoke alarms</label>
+            <label class="opt"><input type="radio" name="service" value="Lighting, power or rewiring">Lighting, power or rewiring</label>
+            <label class="opt"><input type="radio" name="service" value="Renovation, pool or spa">Renovation, pool or spa</label>
+            <label class="opt"><input type="radio" name="service" value="Data or Wi-Fi">Data or Wi-Fi</label>
+            <label class="opt"><input type="radio" name="service" value="Something is faulty or tripping">Something is faulty or tripping</label>
+            <label class="opt"><input type="radio" name="service" value="Commercial or builder work">Commercial or builder work</label>
+          </div>
+        </fieldset>
+
+        <fieldset class="step-pane" data-step="2" style="border:0;padding:0;margin:0;min-width:0">
+          <legend class="q">What type of property?</legend>
+          <div class="opts" data-name="property">
+            <label class="opt"><input type="radio" name="property" value="Home I own">Home I own</label>
+            <label class="opt"><input type="radio" name="property" value="Rental or investment property I own">Rental or investment property I own</label>
+            <label class="opt"><input type="radio" name="property" value="Business">Business</label>
+            <label class="opt"><input type="radio" name="property" value="New build or renovation with a builder">New build or renovation with a builder</label>
+          </div>
+        </fieldset>
+
+        <fieldset class="step-pane" data-step="3" style="border:0;padding:0;margin:0;min-width:0">
+          <legend class="q">When do you want it done?</legend>
+          <div class="opts" data-name="timing">
+            <label class="opt"><input type="radio" name="timing" value="This week">This week</label>
+            <label class="opt"><input type="radio" name="timing" value="Within a month">Within a month</label>
+            <label class="opt"><input type="radio" name="timing" value="Before 1 January 2027">Before 1 January 2027</label>
+            <label class="opt"><input type="radio" name="timing" value="Just getting a price">Just getting a price</label>
+          </div>
+        </fieldset>
+
+        <fieldset class="step-pane" data-step="4" style="border:0;padding:0;margin:0;min-width:0">
+          <legend class="q">Where is the property?</legend>
+          <div class="row2">
+            <div class="field"><label for="suburb">Suburb</label><input id="suburb" name="suburb" type="text" autocomplete="address-level2" required></div>
+            <div class="field"><label for="postcode">Postcode</label><input id="postcode" name="postcode" type="text" inputmode="numeric" pattern="[0-9]{4}" maxlength="4" autocomplete="postal-code" required></div>
+          </div>
+          <p class="form-hint" data-v="formHint">We work from Caloundra and Little Mountain through Aura to Currimundi.</p>
+          <div class="form-nav"><button type="button" class="btn btn-back" data-back>Back</button><button type="button" class="btn btn-primary" data-next>Next</button></div>
+        </fieldset>
+
+        <fieldset class="step-pane" data-step="5" style="border:0;padding:0;margin:0;min-width:0">
+          <legend class="q">Where should we send your quote?</legend>
+          <div class="field"><label for="name">Full name</label><input id="name" name="name" type="text" autocomplete="name" required></div>
+          <div class="field"><label for="mobile">Mobile</label><input id="mobile" name="mobile" type="tel" inputmode="tel" autocomplete="tel" required></div>
+          <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required></div>
+          <p class="form-error" id="formError">Check the highlighted fields.</p>
+          <div class="form-nav"><button type="button" class="btn btn-back" data-back>Back</button><button type="submit" class="btn btn-primary" style="flex:1">Get my free quote</button></div>
+          <div class="form-fine">
+            <span>Your details stay with Foreshore Electrical and Data. No spam, no reselling.</span>
+            <span>Prefer to talk? <a class="js-tel" href="tel:0400000000" style="color:#fff">Call now</a>.</span>
+          </div>
+        </fieldset>
+
+        <input type="hidden" name="area" id="h_area">
+        <input type="hidden" name="utm_source" id="h_utm_source">
+        <input type="hidden" name="utm_medium" id="h_utm_medium">
+        <input type="hidden" name="utm_campaign" id="h_utm_campaign">
+        <input type="hidden" name="utm_content" id="h_utm_content">
+        <input type="hidden" name="utm_term" id="h_utm_term">
+        <input type="hidden" name="fbclid" id="h_fbclid">
+        <input type="hidden" name="page_url" id="h_page_url">
+      </form>
+      <div class="thanks" id="thanks">
+        <h3 id="thanksTitle">Thanks. You will get a text in the next minute.</h3>
+        <p>The electrician will call you in business hours to price the job. If you can, reply to the text with a photo of your switchboard so the quote is ready faster.</p>
+        <p>Need us now? <a class="js-tel" href="tel:0400000000" style="color:#fff">Call now</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 10: FINAL CTA -->
+<section class="s-green cta-band" id="final">
+  <div class="container">
+    <div>
+      <h2>Get Your Free Quote</h2>
+      <p class="lead">Fixed price before we start, booked this week, and a free switchboard and smoke alarm check on any job over $400.</p>
+      <p style="margin-top:8px">Fifteen years on the Sunshine Coast. 5.0 from 32 reviews. Licensed and insured.</p>
+    </div>
+    <div class="btns">
+      <a class="btn btn-dark" href="#quote">Get my free quote</a>
+      <a class="btn btn-secondary js-tel" href="tel:0400000000">Call now</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer" id="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a class="logo" href="#top"><img src="assets/logo-stacked.png" alt="Foreshore Electrical and Data" width="593" height="521" loading="lazy"></a>
+        <p class="about-line">Licensed electrical and data contractor, Banya, Sunshine Coast. Reliable. Responsive. Trusted by locals.</p>
+      </div>
+      <div>
+        <h4>Contact us</h4>
+        <ul>
+          <li><a href="mailto:admin@foreshore.au">admin@foreshore.au</a></li>
+          <li><a class="js-tel" href="tel:0400000000">Call now</a></li>
+          <li>Banya, Sunshine Coast QLD</li>
+          <li>24/7 for emergencies</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Areas we service</h4>
+        <ul id="footerAreas">
+          <li>Caloundra, Caloundra West</li>
+          <li>Little Mountain, Aroona, Currimundi</li>
+          <li>Banya, Baringa, Nirimba, Bells Creek</li>
+          <li>Pelican Waters, Golden Beach</li>
+          <li>Kings Beach, Moffat Beach, Dicky Beach</li>
+          <li>Meridan Plains, Birtinya and the southern Sunshine Coast</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Social</h4>
+        <div class="social" aria-label="Facebook and Instagram">
+          <span title="Facebook"><svg viewBox="0 0 24 24"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.8c0-.9.3-1.6 1.6-1.6h1.7V4.4c-.3 0-1.3-.1-2.5-.1-2.5 0-4.1 1.5-4.1 4.2v2.3H7.4V14h2.8v8z"/></svg></span>
+          <span title="Instagram"><svg viewBox="0 0 24 24"><path d="M12 7.2A4.8 4.8 0 1 0 12 16.8 4.8 4.8 0 0 0 12 7.2zm0 7.9a3.1 3.1 0 1 1 0-6.2 3.1 3.1 0 0 1 0 6.2zM17 5.8a1.1 1.1 0 1 0 0 2.2 1.1 1.1 0 0 0 0-2.2zM21.5 8c-.1-1.5-.4-2.8-1.5-3.9S17.5 2.6 16 2.5C14.5 2.4 9.5 2.4 8 2.5 6.5 2.6 5.2 2.9 4.1 4S2.6 6.5 2.5 8c-.1 1.5-.1 6.5 0 8 .1 1.5.4 2.8 1.5 3.9s2.4 1.4 3.9 1.5c1.5.1 6.5.1 8 0 1.5-.1 2.8-.4 3.9-1.5s1.4-2.4 1.5-3.9c.1-1.5.1-6.5 0-8zm-2 9.8a3.2 3.2 0 0 1-1.8 1.8c-1.2.5-4.2.4-5.7.4s-4.5.1-5.7-.4a3.2 3.2 0 0 1-1.8-1.8c-.5-1.2-.4-4.2-.4-5.7s-.1-4.5.4-5.7A3.2 3.2 0 0 1 6.3 4.5c1.2-.5 4.2-.4 5.7-.4s4.5-.1 5.7.4a3.2 3.2 0 0 1 1.8 1.8c.5 1.2.4 4.2.4 5.7s.1 4.5-.4 5.7z"/></svg></span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-legal">
+      <p>Foreshore Electrical and Data. Licensed electrical contractor, Queensland. Fully insured. All work completed to Australian Standards.</p>
+      <details id="privacy"><summary style="cursor:pointer;color:#fff">Privacy policy</summary><p class="privacy" style="margin-top:8px">Details you enter on this page (name, mobile, email, suburb and the job you describe) are used by Foreshore Electrical and Data to contact you about your enquiry and to send your quote. We do not sell or share your details with third parties for their marketing. You can ask us to delete your details at any time by emailing admin@foreshore.au.</p></details>
+      <div class="row"><span>&copy; 2026 Foreshore Electrical and Data. All rights reserved.</span><span>Sunshine Coast, Queensland</span></div>
+    </div>
+  </div>
+</footer>
+
+<div class="sticky" aria-label="Quick actions">
+  <a class="btn btn-primary" href="#quote">Get my free quote</a>
+  <a class="btn btn-secondary js-tel" href="tel:0400000000">Call now</a>
+</div>
+
+<script>
+(function(){
+  /* ========= CONFIG: replace before launch ========= */
+  var CONFIG = {
+    phoneTel: "0400000000",   /* REPLACE with the GHL tracking number digits (never 0449 123 439) */
+    webhook: ""               /* Optional: GHL inbound webhook URL. Leave empty for Build 1 (no external calls). */
+  };
+
+  /* ========= LOCATION VARIANTS (Meta ad set -> ?area=) ========= */
+  var AREAS = {
+    coast: {
+      label: "Southern coast (default)",
+      headline: "Switchboard upgrades, smoke alarms and electrical done right, by the Caloundra sparkie you actually speak to.",
+      sub: "Fixed price before we start, booked this week, and a free switchboard and smoke alarm health check with any job over $400. Darren has kept southern Sunshine Coast homes safe for 15 years.",
+      proofHeadline: "Recent Jobs Across The Southern Coast",
+      servicesLead: "Electrical and data under one roof, for homes and small businesses from Caloundra to Currimundi.",
+      formHint: "We work from Caloundra and Little Mountain through Aura to Currimundi.",
+      faqAreas: "Caloundra, Little Mountain, Aroona, Currimundi, Banya, Baringa, Caloundra West, Pelican Waters, Golden Beach, Kings Beach, Moffat Beach and the southern Sunshine Coast. Put your suburb in the form and we will confirm.",
+      leadOrder: ["switchboard","smoke","lighting"]
+    },
+    aura: {
+      label: "Aura / Caloundra West",
+      headline: "Extra power, lighting, fans and Wi-Fi for Aura and Caloundra West homes, by the local sparkie who turns up.",
+      sub: "The builder gave you the minimum. Darren adds the points, pendants, fans, outdoor power and data the house should have had, fixed price, booked this week, with a free switchboard and smoke alarm check on any job over $400. Banya, Baringa, Nirimba, Bells Creek and Caloundra West.",
+      proofHeadline: "Recent Jobs In Aura And Caloundra West",
+      servicesLead: "Lighting, power, fans and data for the new estates, plus everything else a licensed local does.",
+      formHint: "Banya, Baringa, Nirimba, Bells Creek, Caloundra West and the rest of the southern coast.",
+      faqAreas: "Banya, Baringa, Nirimba, Bells Creek and Caloundra West first, then Caloundra, Little Mountain, Aroona, Currimundi and the beaches. Put your suburb in the form and we will confirm.",
+      leadOrder: ["lighting","switchboard","smoke"]
+    },
+    caloundra: {
+      label: "Little Mountain / Aroona / Currimundi",
+      headline: "Switchboard upgrades and smoke alarms for Little Mountain, Aroona and Currimundi homes, fixed price, booked this week.",
+      sub: "Ceramic fuses, a board that keeps tripping, alarms that will not pass the 2027 rules: Darren has been fixing 80s and 90s homes on the southern coast for 15 years. Free switchboard and smoke alarm health check with any job over $400.",
+      proofHeadline: "Recent Jobs In Little Mountain, Aroona And Currimundi",
+      servicesLead: "Switchboards, smoke alarms and rewiring for established homes, plus everything else a licensed local does.",
+      formHint: "Little Mountain, Aroona, Currimundi, Meridan Plains, Caloundra and the rest of the southern coast.",
+      faqAreas: "Little Mountain, Aroona, Currimundi, Meridan Plains and Caloundra first, then Aura, the beaches and the rest of the southern Sunshine Coast. Put your suburb in the form and we will confirm.",
+      leadOrder: ["switchboard","smoke","lighting"]
+    },
+    beaches: {
+      label: "Caloundra beaches / Pelican Waters",
+      headline: "Switchboards, smoke alarms and safety checks for Caloundra's beachside homes, units and rentals.",
+      sub: "Salt air, old boards, holiday lets and canal homes with pools. Fixed-price electrical from a licensed local, smoke alarms done to the rental and 2027 standards, and a free switchboard and smoke alarm check on any job over $400. Golden Beach, Pelican Waters, Kings Beach, Moffat Beach, Dicky Beach and Caloundra.",
+      proofHeadline: "Recent Jobs Around Caloundra's Beaches",
+      servicesLead: "Smoke alarm compliance, switchboards and pool electrical for beachside homes, units and rentals, plus everything else a licensed local does.",
+      formHint: "Golden Beach, Pelican Waters, Kings Beach, Moffat Beach, Dicky Beach, Shelly Beach, Caloundra and the rest of the southern coast.",
+      faqAreas: "Golden Beach, Pelican Waters, Kings Beach, Moffat Beach, Dicky Beach, Shelly Beach and Caloundra first, then Little Mountain, Aura and the rest of the southern Sunshine Coast. Put your suburb in the form and we will confirm.",
+      leadOrder: ["smoke","switchboard","lighting"]
+    }
+  };
+
+  var params = new URLSearchParams(location.search);
+  var areaKey = (params.get("area") || "coast").toLowerCase();
+  if (!AREAS[areaKey]) areaKey = "coast";
+  var area = AREAS[areaKey];
+
+  /* Apply variant copy */
+  document.querySelectorAll("[data-v]").forEach(function(el){
+    var k = el.getAttribute("data-v");
+    if (area[k]) el.textContent = area[k];
+  });
+  /* Reorder proof tiles and lead service rows */
+  function reorder(containerId, order){
+    var c = document.getElementById(containerId); if(!c) return;
+    order.forEach(function(key){
+      var el = c.querySelector('[data-key="'+key+'"]'); if (el) c.appendChild(el);
+    });
+    var rows = c.querySelectorAll(".svc-row");
+    rows.forEach(function(r,i){ r.classList.toggle("flip", i%2===1); });
+  }
+  reorder("proofTiles", area.leadOrder);
+  reorder("svcLead", area.leadOrder);
+
+  /* Preview switcher */
+  if (params.get("preview")) {
+    var bar = document.getElementById("previewBar"); bar.classList.add("on");
+    bar.querySelectorAll("a").forEach(function(a){ a.classList.toggle("active", a.getAttribute("data-area")===areaKey); });
+  }
+
+  /* Phone links */
+  document.querySelectorAll(".js-tel").forEach(function(a){ a.setAttribute("href","tel:"+CONFIG.phoneTel); });
+
+  /* Stars */
+  var star = '<svg viewBox="0 0 24 24"><path d="M12 2l3 6 6 .9-4.5 4.3 1.1 6.3L12 16.6 6.4 19.5l1.1-6.3L3 8.9 9 8z"/></svg>';
+  document.querySelectorAll(".stars").forEach(function(s){ s.innerHTML = star+star+star+star+star; });
+
+  /* Hidden fields */
+  function setVal(id,v){ var el=document.getElementById(id); if(el) el.value=v||""; }
+  setVal("h_area", areaKey);
+  ["utm_source","utm_medium","utm_campaign","utm_content","utm_term","fbclid"].forEach(function(k){ setVal("h_"+k, params.get(k)); });
+  setVal("h_page_url", location.href);
+
+  /* Hero video: autoplay unless reduced motion */
+  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var hv = document.getElementById("heroVideo");
+  if (hv && !reduce) { hv.setAttribute("autoplay",""); var p = hv.play(); if (p && p.catch) p.catch(function(){}); }
+
+  /* Job clips: play on hover (pointer) or when in view (touch) */
+  var clips = document.querySelectorAll(".js-clip");
+  var hoverable = window.matchMedia && window.matchMedia("(hover: hover)").matches;
+  function loadClip(box){
+    var v = box.querySelector("video");
+    if (v && !v.getAttribute("src")) { v.setAttribute("src", box.getAttribute("data-src")); v.load(); }
+    return v;
+  }
+  function playClip(box){ if (reduce) return; var v=loadClip(box); var p=v.play(); if(p&&p.catch)p.catch(function(){}); box.classList.add("playing"); }
+  function stopClip(box){ var v=box.querySelector("video"); if(v){v.pause();} box.classList.remove("playing"); }
+  clips.forEach(function(box){
+    if (hoverable) {
+      box.addEventListener("mouseenter", function(){ playClip(box); });
+      box.addEventListener("mouseleave", function(){ stopClip(box); });
+    }
+    box.addEventListener("click", function(){ box.classList.contains("playing") ? stopClip(box) : playClip(box); });
+  });
+  if (!hoverable && "IntersectionObserver" in window && !reduce) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ e.isIntersecting && e.intersectionRatio>0.6 ? playClip(e.target) : stopClip(e.target); });
+    }, {threshold:[0,0.6,1]});
+    clips.forEach(function(b){ io.observe(b); });
+  }
+
+  /* About video */
+  var ab = document.getElementById("aboutVideo"), ap = document.getElementById("aboutPlayer"), btn = document.getElementById("aboutPlay");
+  if (btn) btn.addEventListener("click", function(){ ab.classList.add("playing"); ap.setAttribute("controls",""); ap.play(); });
+  if (ap) ap.addEventListener("ended", function(){ ab.classList.remove("playing"); ap.removeAttribute("controls"); });
+
+  /* Multi-step form */
+  var form = document.getElementById("quoteForm");
+  var panes = Array.prototype.slice.call(form.querySelectorAll(".step-pane"));
+  var bar = document.getElementById("progressBar");
+  var current = 1;
+  function show(n){
+    current = n;
+    panes.forEach(function(p){ p.classList.toggle("active", +p.getAttribute("data-step")===n); });
+    bar.style.width = (n/panes.length*100)+"%";
+    var first = panes[n-1].querySelector("input:not([type=radio]):not([type=hidden])");
+    if (first && n>3) first.focus({preventScroll:true});
+  }
+  /* radio steps auto-advance */
+  form.querySelectorAll(".opts").forEach(function(group){
+    group.querySelectorAll("input[type=radio]").forEach(function(r){
+      r.addEventListener("change", function(){
+        group.querySelectorAll(".opt").forEach(function(o){ o.classList.remove("selected"); });
+        r.closest(".opt").classList.add("selected");
+        setTimeout(function(){ show(current+1); }, 160);
+      });
+    });
+  });
+  form.querySelectorAll("[data-back]").forEach(function(b){ b.addEventListener("click", function(){ show(Math.max(1,current-1)); }); });
+  form.querySelectorAll("[data-next]").forEach(function(b){ b.addEventListener("click", function(){ if (validatePane(current)) show(current+1); }); });
+  function validatePane(n){
+    var ok = true;
+    panes[n-1].querySelectorAll("input[required]").forEach(function(i){
+      var valid = i.value.trim().length>0 && (!i.pattern || new RegExp("^"+i.pattern+"$").test(i.value.trim())) && (i.type!=="email" || /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(i.value.trim()));
+      if (i.name==="mobile") valid = /^(\+?61|0)[2-9]\d{8}$/.test(i.value.replace(/[\s\-()]/g,""));
+      i.classList.toggle("error", !valid); if(!valid) ok=false;
+    });
+    var err = document.getElementById("formError"); if (err) err.classList.toggle("on", !ok && n===5);
+    return ok;
+  }
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+    if (!validatePane(5)) return;
+    var data = {}; new FormData(form).forEach(function(v,k){ data[k]=v; });
+    data.submitted_at = new Date().toISOString();
+    var done = function(){
+      form.style.display="none";
+      var t = document.getElementById("thanks"); t.classList.add("on");
+      var first = (data.name||"").trim().split(" ")[0];
+      if (first) document.getElementById("thanksTitle").textContent = "Thanks, "+first+". You will get a text in the next minute.";
+      document.getElementById("formPanel").scrollIntoView({behavior:"smooth",block:"center"});
+    };
+    if (CONFIG.webhook) {
+      fetch(CONFIG.webhook,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(data),keepalive:true}).then(done,done);
+    } else { try{ console.log("Lead (no webhook set):", data); }catch(_){} done(); }
+  });
+
+  /* Desktop: clone the form panel into the hero */
+  var slot = document.getElementById("heroFormSlot");
+  if (slot && window.matchMedia("(min-width:1024px)").matches) {
+    var panel = document.getElementById("formPanel");
+    var wrap = panel.parentNode;
+    slot.appendChild(panel);
+    document.getElementById("quote").style.display = "none";
+    document.querySelectorAll('a[href="#quote"]').forEach(function(a){ a.setAttribute("href","#top"); });
+  }
+})();
+</script>
+</body>
+</html>
