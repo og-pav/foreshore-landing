@@ -49,10 +49,16 @@ section{padding-block:64px}
 .btn-block{width:100%}
 
 /* Header */
-.header{position:sticky;top:0;z-index:50;background:var(--dark);color:var(--white);height:64px}
-.header .container{height:100%;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.header{position:sticky;top:0;z-index:50;background:var(--dark);color:var(--white)}
+.header .container{height:64px;display:flex;align-items:center;justify-content:space-between;gap:16px}
 .header .logo img{height:36px;width:auto}
 @media (max-width:480px){.header .logo img{height:30px}}
+.svc-tag{display:none;align-items:center;gap:10px;font-size:14px;line-height:18px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+.svc-tag b{color:var(--ink);background:var(--yellow);font-weight:500;padding:5px 12px;border-radius:100px;font-size:13px;letter-spacing:.02em}
+.svc-strip{display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;padding:7px var(--gutter);border-top:1px solid var(--line-dark);font-size:13px;line-height:18px;color:var(--muted);text-align:center}
+.svc-strip b{color:var(--yellow);font-weight:500;text-transform:uppercase;letter-spacing:.08em;font-size:12px}
+@media (min-width:900px){.svc-tag{display:inline-flex;margin-right:auto;margin-left:24px}.svc-strip{display:none}}
+.hero-service{display:inline-flex;align-self:start;justify-self:start;background:var(--yellow);color:var(--ink);font-size:13px;line-height:16px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;padding:7px 12px;border-radius:100px}
 
 /* Preview switcher (only with ?preview=1) */
 .preview-bar{display:none;background:#111;color:#fff;font-size:13px;line-height:18px;padding:8px var(--gutter);gap:6px 14px;flex-wrap:wrap;align-items:center;justify-content:center}
@@ -271,8 +277,10 @@ body{padding-bottom:78px}
 <header class="header">
   <div class="container">
     <a class="logo" href="#top" aria-label="Foreshore Electrical and Data"><img src="assets/logo-horizontal.png" alt="Foreshore Electrical and Data" width="684" height="140"></a>
+    <span class="svc-tag"><b data-v="service">Switchboards and smoke alarms</b><span data-v="areaLabel">Sunshine Coast</span></span>
     <a class="btn btn-primary btn-sm" href="#quote">Get my free quote</a>
   </div>
+  <div class="svc-strip"><b data-v="service">Switchboards and smoke alarms</b><span data-v="areaLabel">Sunshine Coast</span></div>
 </header>
 
 <main id="top">
@@ -708,6 +716,11 @@ body{padding-bottom:78px}
   var AREAS = {
     coast: {
       label: "Sunshine Coast (default)",
+      service: "Switchboards and smoke alarms",
+      areaLabel: "Sunshine Coast",
+      heroService: "Switchboards and smoke alarms · Sunshine Coast",
+      slug: "switchboards-smoke-alarms-sunshine-coast",
+      pageTitle: "Switchboards and Smoke Alarms Sunshine Coast | Foreshore Electrical and Data",
       headline: "Switchboard upgrades, smoke alarms and electrical done right, by the Caloundra electrician you actually speak to.",
       sub: "Fixed price before we start, booked this week, and a free switchboard and smoke alarm health check with any job over $400. Darren has kept Sunshine Coast homes safe for 15 years.",
       proofHeadline: "Recent Jobs Across The Sunshine Coast",
@@ -718,6 +731,11 @@ body{padding-bottom:78px}
     },
     aura: {
       label: "Aura / Caloundra West",
+      service: "Lighting, power and fans",
+      areaLabel: "Aura and Caloundra West",
+      heroService: "Lighting, power and fans · Aura and Caloundra West",
+      slug: "lighting-power-aura",
+      pageTitle: "Lighting, Power and Fans Aura and Caloundra West | Foreshore Electrical and Data",
       headline: "Extra power, lighting, fans and Wi-Fi for Aura and Caloundra West homes, by the local electrician who turns up.",
       sub: "The builder gave you the minimum. Darren adds the points, pendants, fans, outdoor power and data the house should have had, fixed price, booked this week, with a free switchboard and smoke alarm check on any job over $400. Banya, Baringa, Nirimba, Bells Creek and Caloundra West.",
       proofHeadline: "Recent Jobs In Aura And Caloundra West",
@@ -728,6 +746,11 @@ body{padding-bottom:78px}
     },
     caloundra: {
       label: "Little Mountain / Aroona / Currimundi",
+      service: "Switchboard upgrades",
+      areaLabel: "Little Mountain, Aroona and Currimundi",
+      heroService: "Switchboard upgrades · Little Mountain, Aroona and Currimundi",
+      slug: "switchboard-upgrades-caloundra",
+      pageTitle: "Switchboard Upgrades Little Mountain, Aroona and Currimundi | Foreshore Electrical and Data",
       headline: "Switchboard upgrades and smoke alarms for Little Mountain, Aroona and Currimundi homes, fixed price, booked this week.",
       sub: "Ceramic fuses, a board that keeps tripping, alarms that will not pass the 2027 rules: Darren has been fixing 80s and 90s homes on the Sunshine Coast for 15 years. Free switchboard and smoke alarm health check with any job over $400.",
       proofHeadline: "Recent Jobs In Little Mountain, Aroona And Currimundi",
@@ -738,6 +761,11 @@ body{padding-bottom:78px}
     },
     beaches: {
       label: "Caloundra beaches / Pelican Waters",
+      service: "Smoke alarm compliance",
+      areaLabel: "Caloundra beaches and Pelican Waters",
+      heroService: "Smoke alarm compliance · Caloundra beaches and Pelican Waters",
+      slug: "smoke-alarms-caloundra-beaches",
+      pageTitle: "Smoke Alarm Compliance Caloundra Beaches and Pelican Waters | Foreshore Electrical and Data",
       headline: "Switchboards, smoke alarms and safety checks for Caloundra's beachside homes, units and rentals.",
       sub: "Salt air, old boards, holiday lets and canal homes with pools. Fixed-price electrical from a licensed local, smoke alarms done to the rental and 2027 standards, and a free switchboard and smoke alarm check on any job over $400. Golden Beach, Pelican Waters, Kings Beach, Moffat Beach, Dicky Beach and Caloundra.",
       proofHeadline: "Recent Jobs Around Caloundra's Beaches",
@@ -749,11 +777,16 @@ body{padding-bottom:78px}
   };
 
   var params = new URLSearchParams(location.search);
-  var areaKey = (params.get("area") || "coast").toLowerCase();
-  if (!AREAS[areaKey]) areaKey = "coast";
+  var areaKey = (params.get("area") || "").toLowerCase();
+  if (!AREAS[areaKey]) {
+    areaKey = "coast";
+    var seg = location.pathname.replace(/\/+$/,"").split("/").pop().toLowerCase();
+    Object.keys(AREAS).forEach(function(k){ if (AREAS[k].slug && AREAS[k].slug===seg) areaKey = k; });
+  }
   var area = AREAS[areaKey];
 
   /* Apply variant copy */
+  if (area.pageTitle) document.title = area.pageTitle;
   document.querySelectorAll("[data-v]").forEach(function(el){
     var k = el.getAttribute("data-v");
     if (area[k]) el.textContent = area[k];

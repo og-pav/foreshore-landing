@@ -1,0 +1,7 @@
+{
+  "cleanUrls": false,
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/(lighting-power-aura|switchboard-upgrades-caloundra|smoke-alarms-caloundra-beaches|switchboards-smoke-alarms-sunshine-coast)", "destination": "/index.html" }
+  ]
+}
