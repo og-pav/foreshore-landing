@@ -83,11 +83,15 @@ section{padding-block:64px}
 .trust{display:flex;flex-wrap:wrap;gap:10px 22px;font-size:14px;line-height:20px;color:var(--white)}
 .trust span{display:inline-flex;align-items:center;gap:8px}
 .trust svg{width:22px;height:22px;stroke:var(--yellow);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
-.hero-form{display:none}
+.hero-form{display:block;scroll-margin-top:124px}
+@media (min-width:900px){.hero-form{scroll-margin-top:84px}}
+.ghl-card{background:#FFFFFF;border-radius:var(--radius);padding:20px 16px 8px;box-shadow:0 12px 40px rgba(0,0,0,.35)}
+.ghl-card h2{font-size:26px;line-height:1.2;color:var(--ink);margin:0 4px 4px}
+.ghl-card .sub{color:#4A463E;font-size:15px;line-height:22px;margin:0 4px 8px}
+.ghl-card iframe{display:block;width:100%;min-height:648px;border:0;border-radius:8px}
 @media (min-width:1024px){
-  .hero .container{grid-template-columns:minmax(0,1fr) 440px;align-items:end;padding-block:72px 64px;min-height:640px}
-  .hero-form{display:block}
-  .hero-form .form-panel{margin:0}
+  .hero .container{grid-template-columns:minmax(0,1fr) 460px;align-items:start;padding-block:72px 64px;min-height:640px}
+  .hero-copy{align-self:end}
 }
 
 /* Proof */
@@ -263,6 +267,11 @@ body{padding-bottom:78px}
   .container{padding-inline:5%}
 }
 </style>
+<script
+  src="https://link.msgsndr.com/js/external-tracking.js"
+  data-tracking-id="tk_dfefe9a393624189ac72c9230177f91d">
+</script>
+<!-- META PIXEL: not created yet. Paste the Meta Pixel base code here once the pixel exists in Events Manager. -->
 </head>
 <body>
 
@@ -312,7 +321,30 @@ body{padding-bottom:78px}
       </div>
       <p class="hero-note">Text reply straight away. The electrician calls you back to price it, not a call centre.</p>
     </div>
-    <div class="hero-form" id="heroFormSlot"></div>
+    <div class="hero-form" id="quote">
+      <div class="ghl-card">
+        <h2>Get my free quote</h2>
+        <p class="sub">Takes 30 seconds. You get a text straight back and a fixed price from the electrician.</p>
+        <iframe
+          src="https://api.leadconnectorhq.com/widget/form/u19WzUe8f1pPm2ZgB3ua"
+          style="width:100%;height:100%;border:none;border-radius:8px"
+          id="inline-u19WzUe8f1pPm2ZgB3ua"
+          data-layout="{'id':'INLINE'}"
+          data-trigger-type="alwaysShow"
+          data-trigger-value=""
+          data-activation-type="alwaysActivated"
+          data-activation-value=""
+          data-deactivation-type="neverDeactivate"
+          data-deactivation-value=""
+          data-form-name="Foreshore Electrical and Data Website Form"
+          data-height="648"
+          data-layout-iframe-id="inline-u19WzUe8f1pPm2ZgB3ua"
+          data-form-id="u19WzUe8f1pPm2ZgB3ua"
+          data-cookie-consent="true"
+          data-cookie-consent-provider="auto"
+          title="Foreshore Electrical and Data Website Form"></iframe>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -556,89 +588,6 @@ body{padding-bottom:78px}
   </div>
 </section>
 
-<!-- SECTION 9: QUOTE FORM -->
-<section class="s-dark" id="quote">
-  <div class="container">
-    <div class="form-panel" id="formPanel">
-      <form id="quoteForm" novalidate autocomplete="on">
-        <h2>Get my free quote</h2>
-        <p class="sub">Takes 30 seconds. You get a text straight back and a fixed price from the electrician.</p>
-        <div class="progress" aria-hidden="true"><i id="progressBar"></i></div>
-
-        <fieldset class="step-pane active" data-step="1" style="border:0;padding:0;margin:0;min-width:0">
-          <legend class="q">What do you need?</legend>
-          <div class="opts" data-name="service">
-            <label class="opt"><input type="radio" name="service" value="Switchboard upgrade">Switchboard upgrade</label>
-            <label class="opt"><input type="radio" name="service" value="Smoke alarms">Smoke alarms</label>
-            <label class="opt"><input type="radio" name="service" value="Lighting, power or rewiring">Lighting, power or rewiring</label>
-            <label class="opt"><input type="radio" name="service" value="Renovation, pool or spa">Renovation, pool or spa</label>
-            <label class="opt"><input type="radio" name="service" value="Data or Wi-Fi">Data or Wi-Fi</label>
-            <label class="opt"><input type="radio" name="service" value="Something is faulty or tripping">Something is faulty or tripping</label>
-            <label class="opt"><input type="radio" name="service" value="Commercial or builder work">Commercial or builder work</label>
-          </div>
-        </fieldset>
-
-        <fieldset class="step-pane" data-step="2" style="border:0;padding:0;margin:0;min-width:0">
-          <legend class="q">What type of property?</legend>
-          <div class="opts" data-name="property">
-            <label class="opt"><input type="radio" name="property" value="Home I own">Home I own</label>
-            <label class="opt"><input type="radio" name="property" value="Rental or investment property I own">Rental or investment property I own</label>
-            <label class="opt"><input type="radio" name="property" value="Business">Business</label>
-            <label class="opt"><input type="radio" name="property" value="New build or renovation with a builder">New build or renovation with a builder</label>
-          </div>
-        </fieldset>
-
-        <fieldset class="step-pane" data-step="3" style="border:0;padding:0;margin:0;min-width:0">
-          <legend class="q">When do you want it done?</legend>
-          <div class="opts" data-name="timing">
-            <label class="opt"><input type="radio" name="timing" value="This week">This week</label>
-            <label class="opt"><input type="radio" name="timing" value="Within a month">Within a month</label>
-            <label class="opt"><input type="radio" name="timing" value="Before 1 January 2027">Before 1 January 2027</label>
-            <label class="opt"><input type="radio" name="timing" value="Just getting a price">Just getting a price</label>
-          </div>
-        </fieldset>
-
-        <fieldset class="step-pane" data-step="4" style="border:0;padding:0;margin:0;min-width:0">
-          <legend class="q">Where is the property?</legend>
-          <div class="row2">
-            <div class="field"><label for="suburb">Suburb</label><input id="suburb" name="suburb" type="text" autocomplete="address-level2" required></div>
-            <div class="field"><label for="postcode">Postcode</label><input id="postcode" name="postcode" type="text" inputmode="numeric" pattern="[0-9]{4}" maxlength="4" autocomplete="postal-code" required></div>
-          </div>
-          <p class="form-hint" data-v="formHint">We work from Caloundra and Little Mountain through Aura to Currimundi.</p>
-          <div class="form-nav"><button type="button" class="btn btn-back" data-back>Back</button><button type="button" class="btn btn-primary" data-next>Next</button></div>
-        </fieldset>
-
-        <fieldset class="step-pane" data-step="5" style="border:0;padding:0;margin:0;min-width:0">
-          <legend class="q">Where should we send your quote?</legend>
-          <div class="field"><label for="name">Full name</label><input id="name" name="name" type="text" autocomplete="name" required></div>
-          <div class="field"><label for="mobile">Mobile</label><input id="mobile" name="mobile" type="tel" inputmode="tel" autocomplete="tel" required></div>
-          <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required></div>
-          <p class="form-error" id="formError">Check the highlighted fields.</p>
-          <div class="form-nav"><button type="button" class="btn btn-back" data-back>Back</button><button type="submit" class="btn btn-primary" style="flex:1">Get my free quote</button></div>
-          <div class="form-fine">
-            <span>Your details stay with Foreshore Electrical and Data. No spam, no reselling.</span>
-            <span>Prefer to talk? <a class="js-tel" href="tel:0400000000" style="color:#fff">Call now</a>.</span>
-          </div>
-        </fieldset>
-
-        <input type="hidden" name="area" id="h_area">
-        <input type="hidden" name="utm_source" id="h_utm_source">
-        <input type="hidden" name="utm_medium" id="h_utm_medium">
-        <input type="hidden" name="utm_campaign" id="h_utm_campaign">
-        <input type="hidden" name="utm_content" id="h_utm_content">
-        <input type="hidden" name="utm_term" id="h_utm_term">
-        <input type="hidden" name="fbclid" id="h_fbclid">
-        <input type="hidden" name="page_url" id="h_page_url">
-      </form>
-      <div class="thanks" id="thanks">
-        <h3 id="thanksTitle">Thanks. You will get a text in the next minute.</h3>
-        <p>The electrician will call you in business hours to price the job. If you can, reply to the text with a photo of your switchboard so the quote is ready faster.</p>
-        <p>Need us now? <a class="js-tel" href="tel:0400000000" style="color:#fff">Call now</a>.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- SECTION 10: FINAL CTA -->
 <section class="s-green cta-band" id="final">
   <div class="container">
@@ -816,11 +765,15 @@ body{padding-bottom:78px}
   var star = '<svg viewBox="0 0 24 24"><path d="M12 2l3 6 6 .9-4.5 4.3 1.1 6.3L12 16.6 6.4 19.5l1.1-6.3L3 8.9 9 8z"/></svg>';
   document.querySelectorAll(".stars").forEach(function(s){ s.innerHTML = star+star+star+star+star; });
 
-  /* Hidden fields */
-  function setVal(id,v){ var el=document.getElementById(id); if(el) el.value=v||""; }
-  setVal("h_area", areaKey);
-  ["utm_source","utm_medium","utm_campaign","utm_content","utm_term","fbclid"].forEach(function(k){ setVal("h_"+k, params.get(k)); });
-  setVal("h_page_url", location.href);
+  /* Pass ad source into the GHL form (utm, fbclid, area) */
+  (function(){
+    var f = document.getElementById("inline-u19WzUe8f1pPm2ZgB3ua"); if (!f) return;
+    var q = new URLSearchParams();
+    ["utm_source","utm_medium","utm_campaign","utm_content","utm_term","fbclid","gclid"].forEach(function(k){ var v=params.get(k); if(v) q.set(k,v); });
+    q.set("area", areaKey);
+    var base = f.getAttribute("src").split("?")[0];
+    f.setAttribute("src", base + "?" + q.toString());
+  })();
 
   /* Hero video: autoplay unless reduced motion */
   var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -856,67 +809,8 @@ body{padding-bottom:78px}
   if (btn) btn.addEventListener("click", function(){ ab.classList.add("playing"); ap.setAttribute("controls",""); ap.play(); });
   if (ap) ap.addEventListener("ended", function(){ ab.classList.remove("playing"); ap.removeAttribute("controls"); });
 
-  /* Multi-step form */
-  var form = document.getElementById("quoteForm");
-  var panes = Array.prototype.slice.call(form.querySelectorAll(".step-pane"));
-  var bar = document.getElementById("progressBar");
-  var current = 1;
-  function show(n){
-    current = n;
-    panes.forEach(function(p){ p.classList.toggle("active", +p.getAttribute("data-step")===n); });
-    bar.style.width = (n/panes.length*100)+"%";
-    var first = panes[n-1].querySelector("input:not([type=radio]):not([type=hidden])");
-    if (first && n>3) first.focus({preventScroll:true});
-  }
-  /* radio steps auto-advance */
-  form.querySelectorAll(".opts").forEach(function(group){
-    group.querySelectorAll("input[type=radio]").forEach(function(r){
-      r.addEventListener("change", function(){
-        group.querySelectorAll(".opt").forEach(function(o){ o.classList.remove("selected"); });
-        r.closest(".opt").classList.add("selected");
-        setTimeout(function(){ show(current+1); }, 160);
-      });
-    });
-  });
-  form.querySelectorAll("[data-back]").forEach(function(b){ b.addEventListener("click", function(){ show(Math.max(1,current-1)); }); });
-  form.querySelectorAll("[data-next]").forEach(function(b){ b.addEventListener("click", function(){ if (validatePane(current)) show(current+1); }); });
-  function validatePane(n){
-    var ok = true;
-    panes[n-1].querySelectorAll("input[required]").forEach(function(i){
-      var valid = i.value.trim().length>0 && (!i.pattern || new RegExp("^"+i.pattern+"$").test(i.value.trim())) && (i.type!=="email" || /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(i.value.trim()));
-      if (i.name==="mobile") valid = /^(\+?61|0)[2-9]\d{8}$/.test(i.value.replace(/[\s\-()]/g,""));
-      i.classList.toggle("error", !valid); if(!valid) ok=false;
-    });
-    var err = document.getElementById("formError"); if (err) err.classList.toggle("on", !ok && n===5);
-    return ok;
-  }
-  form.addEventListener("submit", function(e){
-    e.preventDefault();
-    if (!validatePane(5)) return;
-    var data = {}; new FormData(form).forEach(function(v,k){ data[k]=v; });
-    data.submitted_at = new Date().toISOString();
-    var done = function(){
-      form.style.display="none";
-      var t = document.getElementById("thanks"); t.classList.add("on");
-      var first = (data.name||"").trim().split(" ")[0];
-      if (first) document.getElementById("thanksTitle").textContent = "Thanks, "+first+". You will get a text in the next minute.";
-      document.getElementById("formPanel").scrollIntoView({behavior:"smooth",block:"center"});
-    };
-    if (CONFIG.webhook) {
-      fetch(CONFIG.webhook,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(data),keepalive:true}).then(done,done);
-    } else { try{ console.log("Lead (no webhook set):", data); }catch(_){} done(); }
-  });
-
-  /* Desktop: clone the form panel into the hero */
-  var slot = document.getElementById("heroFormSlot");
-  if (slot && window.matchMedia("(min-width:1024px)").matches) {
-    var panel = document.getElementById("formPanel");
-    var wrap = panel.parentNode;
-    slot.appendChild(panel);
-    document.getElementById("quote").style.display = "none";
-    document.querySelectorAll('a[href="#quote"]').forEach(function(a){ a.setAttribute("href","#top"); });
-  }
 })();
 </script>
+<script src="https://link.msgsndr.com/js/form_embed.js"></script>
 </body>
 </html>
