@@ -760,6 +760,8 @@ body{padding-bottom:78px}
 
   /* Apply variant copy */
   if (area.pageTitle) document.title = area.pageTitle;
+  /* Remember the area and ad source for the thank-you page */
+  try { sessionStorage.setItem("fs_lead_ctx", JSON.stringify({ area: areaKey, service: area.service, areaLabel: area.areaLabel, utm_source: params.get("utm_source") || "", utm_campaign: params.get("utm_campaign") || "", utm_content: params.get("utm_content") || "", landing: location.pathname })); } catch (_) {}
   document.querySelectorAll("[data-v]").forEach(function(el){
     var k = el.getAttribute("data-v");
     if (area[k]) el.textContent = area[k];

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Thanks, Quote Request Received | Foreshore Electrical and Data</title>
+<style>
+:root{
+  --yellow:#FAB505; --yellow-hover:#E5A504; --dark:#252119; --dark-2:#2E2920; --ink:#0D0900;
+  --green:#91B816; --grey:#ECECEC; --muted:#DADAD8; --line-dark:rgba(255,255,255,.2);
+  --font:system-ui,-apple-system,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+  --radius:16px; --gutter:20px;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:var(--font);font-size:16px;line-height:24px;color:var(--white,#fff);background:var(--dark);-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+h1,h2,h3{margin:0;font-weight:500;line-height:1.2;text-wrap:balance}
+p{margin:0}
+.container{max-width:1280px;margin:0 auto;padding-inline:var(--gutter)}
+@media (min-width:1024px){.container{padding-inline:5%}}
+
+.header{position:sticky;top:0;z-index:50;background:var(--dark);border-bottom:1px solid var(--line-dark)}
+.header .container{height:64px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.header img{height:36px;width:auto}
+@media (max-width:480px){.header img{height:30px}}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;min-width:120px;height:48px;padding:12px 24px;border-radius:100px;border:0;font:inherit;font-weight:500;font-size:16px;line-height:1;text-decoration:none;cursor:pointer;transition:background .18s ease;white-space:nowrap}
+.btn:focus-visible{outline:3px solid var(--yellow);outline-offset:2px}
+.btn-primary{background:var(--yellow);color:var(--ink)}
+.btn-primary:hover{background:var(--yellow-hover)}
+.btn-secondary{background:var(--grey);color:var(--ink)}
+.btn-ghost{background:transparent;color:var(--ink);border:1px solid #D6D3CC}
+.btn-sm{height:40px;padding:8px 20px;font-size:15px}
+
+.hero{padding-block:56px 48px}
+@media (min-width:1024px){.hero{padding-block:88px 72px}}
+.hero .container{display:grid;gap:40px;align-items:center}
+@media (min-width:960px){.hero .container{grid-template-columns:1.1fr .9fr;gap:72px}}
+.tick{width:56px;height:56px;border-radius:100px;background:var(--yellow);display:grid;place-items:center;margin-bottom:24px}
+.tick svg{width:28px;height:28px;stroke:var(--ink);fill:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.chip{display:inline-flex;margin-bottom:16px;background:rgba(250,181,5,.14);color:var(--yellow);font-size:13px;line-height:16px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;padding:7px 12px;border-radius:100px}
+.chip[hidden]{display:none}
+h1{font-size:40px;letter-spacing:-.72px;color:var(--grey)}
+@media (min-width:768px){h1{font-size:48px}}
+@media (min-width:1024px){h1{font-size:56px}}
+.lead{font-size:18px;line-height:27px;color:var(--muted);margin-top:16px;max-width:560px}
+.photo{border-radius:var(--radius);overflow:hidden;aspect-ratio:5/4}
+.photo img{width:100%;height:100%;object-fit:cover}
+.photo-cap{font-size:14px;line-height:20px;color:var(--muted);margin-top:10px}
+
+.next{background:var(--yellow);color:var(--ink);padding-block:64px}
+@media (min-width:1024px){.next{padding-block:88px}}
+.next h2{font-size:32px;letter-spacing:-.52px;margin-bottom:32px}
+@media (min-width:1024px){.next h2{font-size:44px}}
+.steps{display:grid;gap:0}
+@media (min-width:860px){.steps{grid-template-columns:repeat(3,1fr);gap:40px}}
+.step{padding-block:22px;border-top:1px solid rgba(13,9,0,.18)}
+@media (min-width:860px){.step{border-top:0;padding-block:0}}
+.step b{display:block;font-size:44px;line-height:1;font-weight:500;margin-bottom:12px;font-variant-numeric:tabular-nums}
+.step h3{font-size:20px;line-height:28px;letter-spacing:-.28px;margin-bottom:6px}
+.step p{font-size:16px;line-height:24px}
+
+.help{padding-block:64px}
+.help .container{display:grid;gap:32px;align-items:center}
+@media (min-width:900px){.help .container{grid-template-columns:1fr auto;gap:56px}}
+.help h2{font-size:30px;letter-spacing:-.5px;color:#fff}
+.help p{color:var(--muted);margin-top:10px;max-width:620px}
+.help .btns{display:flex;flex-wrap:wrap;gap:12px}
+.review{margin-top:28px;padding-top:24px;border-top:1px solid var(--line-dark);max-width:620px}
+.review .stars{color:var(--yellow);letter-spacing:2px;font-size:18px}
+.review q{display:block;quotes:none;color:#fff;margin-top:8px}
+.review span{display:block;margin-top:8px;font-size:14px;color:var(--muted)}
+
+.footer{border-top:1px solid var(--line-dark);padding-block:32px;font-size:13px;line-height:19px;color:var(--muted)}
+.footer .container{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
+.footer a{color:#fff}
+
+.call-sheet{position:fixed;inset:0;z-index:100;display:flex;align-items:flex-end;justify-content:center;background:rgba(13,9,0,.6);padding:16px 16px calc(16px + env(safe-area-inset-bottom,0px))}
+.call-sheet[hidden]{display:none}
+@media (min-width:600px){.call-sheet{align-items:center}}
+.call-card{width:100%;max-width:400px;background:#fff;color:var(--ink);border-radius:var(--radius);padding:24px;display:grid;gap:14px;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,.4)}
+.call-card .who{font-size:14px;color:#4A463E}
+.call-card .num{font-size:30px;line-height:1.1;font-weight:500;letter-spacing:-.4px;font-variant-numeric:tabular-nums}
+.call-card .note{font-size:13px;color:#6B665C}
+.call-card .actions{display:grid;gap:10px;margin-top:4px}
+.call-card .btn{width:100%}
+</style>
+<script
+  src="https://link.msgsndr.com/js/external-tracking.js"
+  data-tracking-id="tk_dfefe9a393624189ac72c9230177f91d">
+</script>
+<!-- META PIXEL: not created yet. Paste the Meta Pixel base code here, then fire fbq('track','Lead') on this page. This page is the conversion page. -->
+</head>
+<body>
+
+<header class="header">
+  <div class="container">
+    <img src="assets/logo-horizontal.png" alt="Foreshore Electrical and Data" width="684" height="140">
+    <a class="btn btn-primary btn-sm js-tel" href="tel:+61485067451">Call now</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container">
+      <div>
+        <div class="tick" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+        <span class="chip" id="svcChip" hidden></span>
+        <h1 id="thanksTitle">Thanks. Your quote request is in.</h1>
+        <p class="lead">You will get a text in the next minute confirming we have it. Darren will then call you in business hours to talk through the job and give you a fixed price.</p>
+      </div>
+      <div>
+        <div class="photo"><img src="assets/darren-cathy-640.jpg" srcset="assets/darren-cathy-640.jpg 640w, assets/darren-cathy-1200.jpg 1350w" sizes="(min-width:960px) 40vw, 100vw" alt="Darren and Cathy from Foreshore Electrical and Data" width="1350" height="1080"></div>
+        <p class="photo-cap">Darren and Cathy, Foreshore Electrical and Data, Banya.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="next">
+    <div class="container">
+      <h2>What Happens Next</h2>
+      <div class="steps">
+        <div class="step"><b>1</b><h3>A text straight back</h3><p>Check your phone. It comes from our business number, 0485 067 451, so save it.</p></div>
+        <div class="step"><b>2</b><h3>Send a photo of your switchboard</h3><p>Reply to that text with a photo of your switchboard, and the job or fault if you can. It lets us price it faster.</p></div>
+        <div class="step"><b>3</b><h3>A call and a fixed price</h3><p>Darren calls you in business hours, confirms the details and gives you a fixed price. Most quoted work is booked the same week.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="help">
+    <div class="container">
+      <div>
+        <h2>Something urgent?</h2>
+        <p>If the power is out, something is sparking or the board keeps tripping, do not wait for the text. Call now. We take emergency call-outs 24/7.</p>
+        <div class="review">
+          <div class="stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <q>The electrical works were completed to a high standard with excellent attention to detail. Darren was professional, efficient, and ensured everything was done safely and neatly.</q>
+          <span>Raya, Currimundi. 5.0 from 32 Google reviews.</span>
+        </div>
+      </div>
+      <div class="btns">
+        <a class="btn btn-primary js-tel" href="tel:+61485067451">Call 0485 067 451</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <span>&copy; 2026 Foreshore Electrical and Data. Licensed electrical contractor, Queensland. Banya, Sunshine Coast.</span>
+    <span><a href="mailto:admin@foreshore.au">admin@foreshore.au</a></span>
+  </div>
+</footer>
+
+<div class="call-sheet" id="callSheet" role="dialog" aria-modal="true" aria-labelledby="callNum" hidden>
+  <div class="call-card">
+    <p class="who">Call Foreshore Electrical and Data</p>
+    <p class="num" id="callNum">0485 067 451</p>
+    <p class="note">Tap Call to connect. 24/7 for emergencies.</p>
+    <div class="actions">
+      <a class="btn btn-primary" id="callConfirm" href="tel:+61485067451">Call 0485 067 451</a>
+      <button class="btn btn-ghost" type="button" id="callCancel">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  /* Personalise from the landing page the lead came from */
+  var params = new URLSearchParams(location.search), ctx = {};
+  try { ctx = JSON.parse(sessionStorage.getItem("fs_lead_ctx") || "{}") || {}; } catch (_) {}
+  var first = (params.get("first_name") || params.get("name") || "").trim().split(" ")[0];
+  if (first) document.getElementById("thanksTitle").textContent = "Thanks, " + first + ". Your quote request is in.";
+  if (ctx.service) {
+    var chip = document.getElementById("svcChip");
+    chip.textContent = ctx.service + (ctx.areaLabel ? " · " + ctx.areaLabel : "");
+    chip.hidden = false;
+  }
+
+  /* Two-step call: first tap opens the confirm sheet, second tap dials */
+  var sheet = document.getElementById("callSheet"), last = null;
+  function open(e){ e.preventDefault(); last = e.currentTarget; sheet.hidden = false; document.getElementById("callConfirm").focus(); }
+  function close(){ sheet.hidden = true; if (last) last.focus(); }
+  document.querySelectorAll(".js-tel").forEach(function(a){ a.addEventListener("click", open); });
+  document.getElementById("callCancel").addEventListener("click", close);
+  sheet.addEventListener("click", function(e){ if (e.target === sheet) close(); });
+  document.addEventListener("keydown", function(e){ if (e.key === "Escape" && !sheet.hidden) close(); });
+  document.getElementById("callConfirm").addEventListener("click", function(){ setTimeout(function(){ sheet.hidden = true; }, 300); });
+})();
+</script>
+</body>
+</html>
