@@ -2,7 +2,33 @@
   "cleanUrls": false,
   "trailingSlash": false,
   "rewrites": [
-    { "source": "/(lighting-power-aura|switchboard-upgrades-caloundra|smoke-alarms-caloundra-beaches|switchboards-smoke-alarms-sunshine-coast)", "destination": "/index.html" },
-    { "source": "/thank-you", "destination": "/thank-you.html" }
+    {
+      "source": "/pool-spa-sauna",
+      "destination": "/pool-spa-sauna.html"
+    },
+    {
+      "source": "/renovations",
+      "destination": "/renovations.html"
+    },
+    {
+      "source": "/lighting-and-power",
+      "destination": "/lighting-and-power.html"
+    },
+    {
+      "source": "/smoke-alarm-compliance",
+      "destination": "/smoke-alarm-compliance.html"
+    },
+    {
+      "source": "/switchboard-upgrades",
+      "destination": "/switchboard-upgrades.html"
+    },
+    {
+      "source": "/(lighting-power-aura|switchboard-upgrades-caloundra|smoke-alarms-caloundra-beaches|switchboards-smoke-alarms-sunshine-coast)",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/thank-you",
+      "destination": "/thank-you.html"
+    }
   ]
 }
