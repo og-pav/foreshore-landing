@@ -90,7 +90,34 @@ h1{font-size:40px;letter-spacing:-.72px;color:var(--grey)}
   src="https://link.msgsndr.com/js/external-tracking.js"
   data-tracking-id="tk_dfefe9a393624189ac72c9230177f91d">
 </script>
-<!-- META PIXEL: not created yet. Paste the Meta Pixel base code here, then fire fbq('track','Lead') on this page. This page is the conversion page. -->
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '3617448068418621');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=3617448068418621&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+<script>
+/* Lead conversion: fires once per session so a refresh does not double count */
+(function(){
+  try {
+    if (sessionStorage.getItem("fs_lead_fired")) return;
+    var ctx = JSON.parse(sessionStorage.getItem("fs_lead_ctx") || "{}") || {};
+    fbq('track', 'Lead', { content_name: ctx.service || 'Quote request', content_category: ctx.areaLabel || 'Sunshine Coast' });
+    sessionStorage.setItem("fs_lead_fired", "1");
+  } catch (_) { fbq('track', 'Lead'); }
+})();
+</script>
 </head>
 <body>
 
@@ -186,7 +213,7 @@ h1{font-size:40px;letter-spacing:-.72px;color:var(--grey)}
   document.getElementById("callCancel").addEventListener("click", close);
   sheet.addEventListener("click", function(e){ if (e.target === sheet) close(); });
   document.addEventListener("keydown", function(e){ if (e.key === "Escape" && !sheet.hidden) close(); });
-  document.getElementById("callConfirm").addEventListener("click", function(){ setTimeout(function(){ sheet.hidden = true; }, 300); });
+  document.getElementById("callConfirm").addEventListener("click", function(){ try { fbq("track","Contact"); } catch (_) {} setTimeout(function(){ sheet.hidden = true; }, 300); });
 })();
 </script>
 </body>
